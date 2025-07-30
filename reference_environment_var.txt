@@ -1,0 +1,35 @@
+reference_environment_var
+
+SYSTEM:
+
+variable	|	value	|
+---------------------------------
+comspec		| C:\WINDOWS\system32\cmd.exe
+
+driverdata	| C:\Windows\system32\drivers\driverdata
+
+NUMBER_OF_PROCESSORS	|	12
+
+OS		| Windows NT
+
+Path		| C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\VMware\VMware Workstation\bin\;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Pro
+
+PATHEXT		| .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+
+PROCESSOR_ARCHITECTURE	| AMD64
+
+PROCESSOR_IDENTIFIER	| AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD
+
+PROCESSOR_LEVEL		| 23
+
+PROCESSOR_REVISION	| 6801
+
+PSModulePath		| %ProgramFiles%\WindowsPowerShell\Modules;%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules
+
+TEMP		|	C:\WINDOWS\TEMP
+
+TMP		|	C:\WINDOWS\TEMP
+
+USERNAME	|	SYSTEM
+
+windir		|	C:\WINDOWS

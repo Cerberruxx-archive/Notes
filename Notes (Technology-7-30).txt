@@ -1,0 +1,29 @@
+Notes (Technology-7-30)
+
+Git vs. GitHub:
+
+From reddit:
+
+r/nixgang: GitHub is a cloud storage where you keep the files for your project. Git is a tool that tracks the history of your files.
+Some wise person on Reddit once said: Git is to GitHub as porn is to p*rnhub.
+
+
+Git's main usage explained:
+
+From Gemini:
+
+Git is not a tool for writing code directly, but rather a version control system. This means it is used to manage and track changes to files, including source code, over time. 
+Git's primary function is to record changes made to files, allowing users to revert to previous versions, compare changes, and manage different branches of development (basically it's like the Google Docs feature where you can view your document history and go back to old versions if needed).
+Git is NOT designed for writing code directly into; code is written in text editors or IDEs like Visual Studio Code, notepad++ or Sublime Text and THEN imported into Git as a new/existing repository.
+
+From Reddit:
+
+In CompE it's not about whether you suck, it's about if you wanna work on it til you don't suck. If you're willing, you'll do fine. about 55%-80% of people simply give up aftr the first/second year. If you really wanna be a Computer Engineer, you'll be fine. Trust me; been there, done that
+
+
+Calculus explained:
+
+From Gemini:
+
+Calculus is used to model and analyze change in various fields. It helps determine rates of change, areas, volumes, and other quantities that vary. This makes it essential in physics, engineering, economics, and other disciplines where understanding how things change is crucial.
+
