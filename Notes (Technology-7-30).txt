@@ -27,3 +27,12 @@ From Gemini:
 
 Calculus is used to model and analyze change in various fields. It helps determine rates of change, areas, volumes, and other quantities that vary. This makes it essential in physics, engineering, economics, and other disciplines where understanding how things change is crucial.
 
+
+What is the difference between Unix, Posix and Linux?
+
+From Gemini:
+
+UNIX is a brand of proprietary operating systems created by Bell Labs in the late 1960s; this OS is best known for its command-line interface and the philosophy that "everything is a file". POSIX (Portable Operating System Interface) is a specification/set of standards that define Unix-like systems should behave and describes the following features. Linux is a specific, open-source kernel that implements many of the principles and standards found in both Unix and POSIX, making it a widely used Unix-like operating system.
+
+**none of this is in my own words.
+
