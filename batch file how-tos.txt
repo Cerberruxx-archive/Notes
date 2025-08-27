@@ -1,0 +1,76 @@
+BATCH FILE HOW-TOs
+
+To write a file:
+	open Notepad or text file
+	type commands line-by-line
+	save file with .bat extension
+	open the windows command line
+	open batch file
+
+Basic commands:
+
+echo = displays text
+
+@echo off = hides commands being executed
+
+pause = pauses script execution, waiting for the user to press a key
+
+rem = adds comments (ignored by the system)
+
+
+More commands:
+
+file operation: 	copy, del, dir, mkdir, rmdir, cd, ver
+variable manipulation:		set, echo%variable%
+conditionals:		if
+looping:	for
+
+
+cls = clear screen
+
+@ = used before any command hides which command is running.
+
+help = provides all commands in the cmd (only runs if cmd is running as an admin)
+
+---------------------------------------------
+Data types in batch:
+
+Integers, strings
+**FLOATING POINT VALUES/DECIMALS NOT SUPPORTED
+
+Variables:
+
+-Use "set" to create new variables
+	e.g.	SET my_var=Hello World
+
+-Use "echo" to print
+**hint: strings do not need symbols
+
+	e.g.	ECHO %my_var%
+---------------------------------------------
+Operators:
+
+set /a sum=1+1	::addition operator
+echo %sum%
+
+set /a mul=7*9	::multiplication
+echo %mul%
+
+set /a div=9/3 ::division
+echo %div%
+
+set /a assign=10 ::assignment
+echo %assign%
+
+set /a assign+=15 ::increment then assignment
+echo %assign%
+
+set /a mod= 10%3 ::modulus/remainder
+echo %mod%
+
+
+
+" '_' was unexpected at this time."
+
+
+
