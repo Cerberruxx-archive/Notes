@@ -9,7 +9,7 @@ The **tar** command used on Windows 10 or later.
 ### For PowerShell:
 
 * Extract to specific dir:
-.```powershell \-command "Expand-Archive \-Path 'C:\\path\\to\\file.zip' \-DestinationPath 'C:\\path\\to\\extract'"```
+```powershell \-command "Expand-Archive \-Path 'C:\\path\\to\\file.zip' \-DestinationPath 'C:\\path\\to\\extract'"```
 
 ### With 7-zip (third-party):
 
@@ -35,11 +35,10 @@ Use the cmdlet **Expand-Archive** for various folder structures.
 This can be run as one line directly from a standard CMD window.
 
 * Extract each to its own folder:   
-```powershell \-command "Get-ChildItem \*.zip | ForEach-Object { Expand-Archive \-Path $\_.FullName \-DestinationPath ($\_.BaseName) }"  
-```
+```powershell \-command "Get-ChildItem \*.zip | ForEach-Object { Expand-Archive \-Path $\_.FullName \-DestinationPath ($\_.BaseName) }"```
 * Extract all to current folder:   
-```powershell \-command "Get-ChildItem \*.zip | ForEach-Object { Expand-Archive \-Path $\_.FullName \-DestinationPath . \-Force }"
-```
+```powershell \-command "Get-ChildItem \*.zip | ForEach-Object { Expand-Archive \-Path $\_.FullName \-DestinationPath . \-Force }"```
+
 
 ### With 7-zip:
 
