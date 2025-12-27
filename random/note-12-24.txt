@@ -1,0 +1,52 @@
+ques:
+
+why is "setlocal enabledelayedexpansion" considered the best practice for handling variables in loops? what does it mean?
+
+what is the difference between "mv" and "mkdir"?
+
+what does "%%D" mean?
+
+why did you remove the settings i had originally set? are you unable to set similar settings in loops?
+
+why is it more efficient to use a loop rather than a script utilizing "findstr"?
+
+
+note:
+
+findstr only reports results and doesn't have the power to relocate files; move has the ability to relocate and actually SORT.
+
+findstr is for search for text INSIDE files and list the results.
+
+it's vital to wrap path names such as "onedrive/music" in quotes in case of spaces or special chars, which can break the script.
+
+changes how variables are processed in the script.
+By default, variables are executed at parse time (immediately) then execution time (when actually called).
+This allows variables to be processed at execution time.
+
+----------------------
+
+"Personally, I think there is far too much focus on 'which language', rather on the fundamentals of how to think/reason about a program, troubleshooting, and exposure to the actual documentation. ONe you have a solid grasp of one language, picking up others becomes much easier."
+
+"You can spot the smart beginners because they ask, "what is UX design?" The former is only interested in the destination while the latter is interested in the journey."
+
+Snippet:
+
+>Bob: Is there any advice you'd like to give to young programmers/computer science students?
+>Linus: I'm actually the worst person to ask. I knew I was interested in math and computers since an early age, and I was largely self-taught until university. And everything I did was fairly self-driven. So I don't understand the problems people face when they say "what should I do?" It's not where I came from at all.
+
+This is a problem I don't understand too. If you are really into something you motivating yourself in doing things. You can see how stupid people are when you just read the questions on Stackoverflow today. Nobody seems to figure things out by themselves anymore.
+
+Same with YouTube, when people explaining simple math things with extremely effort people complaining then that today's teachers are shit. But it's more your own lack if you're not able to imagine these thing inside your mind by yourself.
+
+**I disagree with Torvalds' point about people being 'stupid' for asking even the simplest of questions. Asking stupid questions is better than trying to struggle through it yourself and reinforcing learned mistakes. Just because others have access to resources previous learners didn't have DOESN'T mean we shouldn't take absolute advantage of them. I say, use the absolute fuck out of AI sources to help explain when something doesn't make sense AFTER putting in at least some effort to figure it out yourself first. It's not plagarism as long as you: understand what the code ACTUALLY DOES and are not just copying and pasting, and/or citing the AI source.**
+
+ref: https://news.ycombinator.com/item?id=19559970
+
+Self observation:
+
+>In summary, well-known programmers such as Torvalds and Geohotz were already talented at a young age, with Geohotz being a born genius and creating game console when he was in elementary school and Torvalds created his own assembler on the VIC-20 at the age of 11. Both were incredibly self-driven and absolutely passionate about computers and other STEM subjects and had a "hands-on" learning approach; they learned by doing rather than only watching or observing. 
+I find it interesting how a lot of the experts usually fiddled and troubleshooted things themselves instead of being stuck in "tutorial hell".
+Both were self-taught before pursuing formal education. They dedicated countless hours to pursuing their goals and working on projects. 
+It's also important to note that most people are NOT masters at anything; they know enough to do their job comfortably (especially in tech). Few people go as far as these two and do not have a strong 'passion' in computers, software and hardware.
+Both were keen on reading documentation and manuals to gain a deeper understand on certain applications or languages.
+They also asked questions and let others review their code to provide feedback for improvement.

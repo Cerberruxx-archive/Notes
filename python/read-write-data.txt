@@ -1,0 +1,116 @@
+# What is read/write (R/W)?
+    The capability of a system, device or component to perform both reading and writing operations on data.
+
+    # "Read": refers to the act of accessing info onto a storage medium or memory?
+
+    # "Write": process of saving or recording data onto a storage medium
+
+# What's the difference between a text file and a binary file?
+
+    # A text file is structured as a sequence of lines (lines being a sequence of characters).
+
+    # A binary file is any file BESIDES a text file; can also only be accessed by the application (usually .exe) file that understands the file's structure
+
+# How do I process files?
+     Choose a file type and obtains its object and 'open' method. Example: Object_file=open(filename,mode).
+            # open() in python returns a file object; most commonly used with two arguments
+
+            # In the example, 'Object_file' is the variable to put the file object in
+
+            # The first arg filename is the full name of the file that needs to be opened; the second arg describes the way that the file will be used
+
+# Explain the 'mode' argument.
+    Has values 'r'(read only), 'w'(only writing), 'a'(opens file for appending, adding new data to the end), 'r+'(opens file for reading and writing).
+
+    This argument is optional.
+
+# How can you create a text file in Python?
+    Sample code:
+
+    file=open('myfile.txt', 'w')
+    print(file) # file object
+    file.write('hello, this is my file')
+    file.write('\nand this is another line')  # \n used for newline
+    file.close() #  closes the file
+
+# How can you read a text file in Python?
+    Sample code:
+
+    # This returns a string containing all characters in the file
+
+    file=open('myfile.txt','r')
+    print(file.read())
+
+    # You can specify the desired amount of characters to return by using file.read(n)
+
+    # The following code reads the first 7 characters of data and returns it as a string.
+
+    file=open('myfile.txt','r')
+    print(file.read(7))
+
+    # To read line-by-line:
+
+    file=open('myfile.txt','r')
+    lineno=0
+
+    for line in file:
+        lineno=lineno+1
+        print(lineno,"",line)
+
+# Explain 'with' statements.
+    'With' statements are a good practice to use because it provides better syntax, exception handling, and automatically closes the file.
+
+    Some examples:
+
+    with open('textfile.txt') as file:
+        data=file.read()
+        # do something with data
+
+    ##
+
+    with open('hello.txt','w') as f:
+        f.write('hellow world')
+
+
+# Demonstrate how to create different file types in Python.
+
+    # Creates a .csv file
+
+    with open('text.csv', 'w') as out_file:
+        m=int(input("Enter an integer to create a table."))
+        for i in range(11):
+            print(i,'*',m,'=',(i*m))
+            out_file.write(str(i) + ',' + str(m) + ',' + '=' + str(i*m)+'\n')
+        out_file.write("Done\n')
+
+        # Read and write to SQL database
+
+        import sqlite3  # check the path first
+        
+        connd=sqlite3.connect('chinook.db')  # You can also include a path to the database
+        connd=sqlite3.connect(':memory:')  # Syntax for creating the database in the MEMORY
+
+        c=connd.cursor()  # creates a cursor
+
+        # How to create row, insert data and save changes
+
+        c.execute('''CREATE TABLE rolodex (fname text, lname text, Tel text)''')
+        c.execute('INSERT INTO rolodex VALUES ('killua','zoldyk','123-456-9999')')
+        connd.commit()
+
+        connd.close()  # close the connection
+
+        # TO TEST:
+
+        '''
+        import sqlite3
+        connd=sqlite3.connect('chinook.db')
+
+        c=connd.cursor()
+
+        for row in c.execute('SELECT * FROM rolodex ORDER BY 1'):
+            print(row)  # should print the data rows
+
+
+        '''
+

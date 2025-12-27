@@ -1,0 +1,136 @@
+POWERSHELL NOTES
+--------------------
+
+page 594:
+
+"These are the same sort of objects I talked about in Chapters 3-9; objects that represent files, folders, Windows device drivers, network services, documents any of the hundreds of objects defined in the .NET Framework Library"
+
+"..buts its commands deal with objects rather than just text"
+
+"what flows from one command to the next, via that pipe symbol (|), is a stream of objects. TH various PowerShell commands let you generate, manipulate, invoke methods on, change properties of, and extract information from these objects"
+
+"The Powershell dir command is actually an 'alias' (shortcut) for the Get-ChildItem cmdlet. You can type either name and get the same result"
+
+"Powershell's built-in commands are called cmdlets."
+
+
+page 595:
+
+"The thing to ponder here is that the dir command in the regular Command Prompt environment generates text in a fixed format. The dir cmdlet in Windows PowerShell generates a list of File and Folder objects, which PowerShell formats into a text listing after the fact.
+
+You can redirect the output of a PowerShell cmdlet to a file...and the same thing occurs: the stream of objects gets formatted into a nice, text listing"
+
+The pipeline operator sends the result of the preceding command to the next command, separated by the pipeline
+
+
+
+A pipeline is a series of commands connected by pipeline operators (|). The layout goes like this:
+
+	Command-1|Command-2|Command-3
+
+	Get-Process notepad|Stop-process
+
+You can also format pipelines like this:
+
+	Get-ChildItem -Path *.txt|
+		Where-Objects{$_.Length -gt 10000}|
+			Sort-Object -Property Length|
+				Format-Table -Property Name, Length
+
+(this basically is gathering text files in the current directory, then selecting the files that are more than 10000 bytes long, sorts them by length, then displays the name and length of those files in a table on the screen)
+
+
+Or this:
+
+	Get-ChildItem -Path *.txt
+	| (FileInfo objects for *.txt)
+	V
+	Where-Object {$_.Length -gt 10000}
+	| (FileInfo objects for *.txt)
+	| (      Length > 10000      )
+	V
+	Sort-Object -Property Length
+	| (FileInfo objects for *.txt)
+	| (      Length > 10000      )
+	| (     Sorted by length     )
+	V
+	Format-Table -Property Name, Length
+	| (FileInfo objects for *.txt)
+	| (      Length > 10000      )
+	| (     Sorted by length     )
+	| (   Formatted in a table   )
+	V
+
+	Name                       Length
+	----                       ------
+	tmp1.txt                    82920
+	tmp2.txt                   114000
+	tmp3.txt                   114000
+
+(this does the same thing as the last pipeline; personally i'm not doing all ts shit but whatever lmao)
+
+
+
+page 596:
+
+".NET programs are for the most part interpreted by a lower-level program, with some sophisticated engineering to make them run nearly as fast as a program that's directly driving your CPU."
+
+"The "Framework" part of the name comes from the fact that there is a huge library of programming functions and objects that any .NET Framework program can use...It includes hundreds of objects that let you work with Graphical User Interfaces (GUIs), database access, network communication, web interaction, cryptography, number-crunching, and more."
+
+
+page 597:
+
+"VBScript can't access core Windows API functions the way that VBA can. Windows Powershell doesn't have this limitation. The entire .NET Framework API is available to scripts"
+
+"Powershell can run three sorts of programs: built-in commands, external programs, and scripts...The idea is that Microsoft and third parties can add install management cmdlets for their applications and servers, so that they can be managed by PowerShell scripts."
+
+
+page 601:
+
+In Powershell you define variables with '$' in front of the variable's name. Example: $a
+
+"whatever you can put into a script, you can also type directly at the PowerShell command prompt"
+
+Powershell allows you to edit your commands with different keys and shortcuts like the left and right arrows, Ctrl + left and Ctrl + right (moves back a char at a time), Home and End (moves to either the beginning or end of the line), Insert (replaces a word), and up and down keys (lets you return to previously typed commands).
+
+Operators include |,<,>,>>,etc.
+
+Parameters (for PS) are mechanisms that provide input to commands (cmdlets) so that it knows exactly what to carry out. 
+	Parameter are basically options/settings that you can give to a cmd to customize its behavior
+	They refine the actions of commands
+
+Parameters are defined by using hypens (-) before the name
+
+	EXAMPLE: Get-Service|Where-Object -Property Status -eq -Value "Running"|ConvertTo-HTML
+
+
+Spaces are NOT required to add between pipes but are a good practice for readability and consistency; the parser will recognize the commands either way
+
+"as one command produces objects, they go into the pipeline, when there are no further commands, any objects in the pipeline are passed to PowerShell's formatting system to be formatted for onscreen display"
+
+"Powershell used two methods to figure out how to get data-objects-dynamically out of the pipeline and 'into' a command on the other side of the pipe. Both of these methods rely on the accepting command's parameters...
+
+This implies that when you design a command and when you design its parameters, you're deciding how that command will accept information, including how it will accept information from the pipeline."
+
+"all commands only get their input by using parameters"
+
+"positional parameters [are] where the order of the values you provide [imply] the parameters those values get fed to"
+
+"...writing it out is a helpful way to understand that everything the command is doing is coming from parameters"
+
+Pipelines carry objects of data from one cmd to another by using 'ByValue' and 'ByPropertyName' 
+
+PS passes "entire objects from the pipeline into a command. Because of that hardcoded preference, it will always attempt to pass entire object before it tries to do anything else."
+To do so, the following MUST BE TRUE:
+	-the accepting cmd must define a parameter that supports the correct pipeline input 'ByValue'
+	-that parameter must be able to accept whatever type of object happens to be within the pipeline
+
+**NOTE: the phrase "accepting command" means 'accepting input' (correct input)
+
+
+
+
+
+
+
+

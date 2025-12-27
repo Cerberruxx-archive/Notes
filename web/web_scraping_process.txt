@@ -1,0 +1,13 @@
+BASIC WEB SCRAPING PROCESS
+
+1.) Fetch the web page:
+Use an HTTP client (e.g. Axios) to send a GET request to the target URL and retrieve the HTML content.
+
+2.) Parse the HTML:
+Load the fetched HTML into an HTML parser (e.g. Cheerio) to create a traversable DOM-like structure.
+
+3.) Extract data:
+Use CSS selectors or XPath expressions within the parser to select specific elements and extract their text content, attributes, or other data.
+
+4.) Handle dynamic content (if necessary):
+If the website uses JavaScript to load content dynamically, use a headless browser (e.g. Puppeteer) to render the page before parsing and extracting data.

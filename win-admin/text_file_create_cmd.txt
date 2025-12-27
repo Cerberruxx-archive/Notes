@@ -1,0 +1,26 @@
+**TO CREATE A FILE VIA WINDOWS CMD:
+
+Method 1:
+
+Type following syntax:	copy con [filename].txt
+
+// after typing this command and pressing 'Enter', the command line should be blank
+
+
+Method 2:
+
+Type following syntax: echo [filename].txt
+
+// After typing this command and pressing 'Enter', the command line should be blank
+
+// This method will directly save the file to the directory mentioned earlier
+
+
+Note: TO EXIT- Press Ctrl + Z; the file will save to the directory previously selected
+
+TO EDIT LINES- Press Up arrow or Down arrow
+
+Sources: https://www.geeksforgeeks.org/how-to-create-a-file-in-cmd/
+
+https://www.computerhope.com/jargon/c/copycon.htm
+

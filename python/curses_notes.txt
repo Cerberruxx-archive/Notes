@@ -1,0 +1,13 @@
+curses wrapper takes functions, initialize the module and pass the initialize object to the function
+
+stdscr=standard output=your console
+basically generates a screen on top of the terminal and refreshes when stated in code
+
+curses needs to be directly run in the terminal for it to output correctly
+need to change terminal directory to be in the folder containing the code
+
+getch()=get character
+
+use stdscr.addstr("") instead of print() because print() goes directly to the command-line instead of the screen
+
+>>  https://www.youtube.com/watch?v=Db4oc8qc9RU&pp=ygUWcHl0aG9uIGN1cnNlcyB0dXRvcmlhbA%3D%3D  <<

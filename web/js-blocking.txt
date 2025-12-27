@@ -1,0 +1,13 @@
+Instructions
+
+Goal: To be able to bypass paywalls/subscription blockers on most sites via pasted javascript code. Should interfere with the server's cdns and such. The code should be loaded before the dynamic HTML code is enabled into the document [to hinder the pop-up before the page even loads it].
+
+
+Function: When enabled (pasted), the page reloads and either:
+	1.) redirects to the desired section [typically blocked]
+	2.) removes the loaded CSS and JS elements blurring/blocking scrollable content
+
+
+Need: More information about server-side scripting, SEO bots and site maintenance, buffer overloads, etc.
+
+
