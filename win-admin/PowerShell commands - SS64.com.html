@@ -1,0 +1,3337 @@
+<!doctype html><html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=1000, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' cmp.inmobi.com; connect-src 'self' cmp.inmobi.com api.cmp.inmobi.com; img-src 'self' data:; style-src 'self' 'unsafe-inline';base-uri 'self';form-action 'self' www.google.com">
+<link rel="stylesheet" href="../main.css" type="text/css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+<title>PowerShell commands - SS64.com</title>
+<link rel="canonical" href="https://ss64.com/ps/">
+<meta name="Description" content="An A-Z Index of Windows PowerShell commands. Get-Acl, Set-Acl, Get-Alias, Get-ChildItem, Get-Command, Add-Content,  Get-Content, Set-Content, Test-Connection">
+<link rel="search" href="https://ss64.com/opensearch.xml" type="application/opensearchdescription+xml" title="SS64.com">
+<style>
+.reverse {color: #F4F621; background-color:black;}
+.highlightps {color: #005F9F;}
+#alias{width: 50px;}
+tr:nth-child(even) td{
+  background: linear-gradient(0.25turn, #D9D9DE, #D6D6DB, #D9D9DE 700px);
+  background-attachment:fixed;}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+   tr:nth-child(even) td{ background-color: #BFBFCA;
+   background: linear-gradient(0.25turn, #BDBDC6, #BFBFC8, #BDBDC6 700px);
+   background-attachment:fixed;}
+   .highlightps{color: #014C7E;}
+}
+
+table{margin-left: 2%;}
+@media (max-width:1000px){table{margin-left: 1%;}}
+@media (max-width:700px){table{margin-left: 0;}}
+</style>
+<script async src="/js/menu.js"></script>
+</head>
+<body>
+<div id="tnav"><ul>
+<li class="tbtn"><a href="../">SS64</a></li>
+<li class=tflat>PowerShell <svg viewBox="0 0 13 20.1" width="13" height="13" style="transform: rotate(0deg);"><path d="M0 2.9l7.2 7.2-7.1 7.1L3 20.1l7.1-7.1 2.9-2.9L2.9 0 0 2.9"></path></svg></li>
+<li class="tbtn"><a href="syntax.html">How-to <svg viewBox="0 0 13 20.1" width="13" height="13" style="transform: rotate(0deg);"><path d="M0 2.9l7.2 7.2-7.1 7.1L3 20.1l7.1-7.1 2.9-2.9L2.9 0 0 2.9"></path></svg></a></li>
+<li><div id="search"><form action="https://www.google.com/search" method="get">
+<input type="text" name="q" id="qu" size="27" maxlength="255" aria-label="Search text">
+<input class="submit mousetrap" value="Search" id="btn" type="submit">
+<input type="hidden" name="sitesearch" value="ss64.com"><input type="hidden" name="udm" value="14"></form></div></li>
+</ul></div>
+<h1>An A-Z Index of <span class="highlightps">Windows <b>PowerShell</b></span> commands</h1>
+
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>Cmdlet</th>
+<th id='alias'>Alias</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="foreach-object.html">&nbsp;%&nbsp;</a></td>
+<td>Alias for <a href="foreach-object.html">ForEach-Object</a></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="where-object.html">&nbsp;?&nbsp;</a></td>
+<td>Alias for <a href="where-object.html">Where-Object</a></td>
+</tr>
+<tr>
+<td><span class="ix">A</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-acl.html">Get-Acl</a><br></td>
+<td>&nbsp;</td>
+<td>Get permission settings for a file or registry key.<br></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-acl.html">Set-Acl</a><br></td>
+<td>&nbsp;</td>
+<td>Set permissions.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="ad.html">Active Directory</a></td>
+<td>&nbsp;</td>
+<td>Account, Computer, Group and User cmdlets.<br></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-alias.html">Get-Alias</a></td>
+<td>gal</td>
+<td>Return alias names for Cmdlets.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="export-alias.html">Export-Alias</a></td>
+<td>epal</td>
+<td>Export currently defined aliases to a file.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="import-alias.html">Import-Alias</a></td>
+<td>ipal</td>
+<td>Import an alias list from a file.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-alias.html">New-Alias</a></td>
+<td>nal</td>
+<td>Create a new alias.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-alias.html">Set-Alias</a></td>
+<td>sal</td>
+<td>Create or change an alias.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-appvclientpackage.html">Get-AppvClientPackage</a></td>
+<td>&nbsp;</td>
+<td>Return App-V Client Packages.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-appxpackage.html">Get-AppxPackage</a></td>
+<td>&nbsp;</td>
+<td>List the app packages installed in a user profile.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-appxpackage.html">Remove-AppxPackage</a></td>
+<td>&nbsp;</td>
+<td>Remove an app package from a user account.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="add-appxprovisionedpackage.html">Add-AppxProvisionedPackage</a></td>
+<td>&nbsp;</td>
+<td>Add an appx package to a Windows image (will install for each new user).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-appxprovisionedpackage.html">Get-AppxProvisionedPackage</a></td>
+<td>&nbsp;</td>
+<td>Get information about appx packages in an image via DISM.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-appxprovisionedpackage.html">Remove-AppxProvisionedPackage</a></td>
+<td>&nbsp;</td>
+<td>Remove an appx package from a Windows image.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="compress-archive.html">Compress-Archive</a></td>
+<td>&nbsp;</td>
+<td>Create a new archive/zipped file. [PS 5+]</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="expand-archive.html">Expand-Archive</a></td>
+<td>&nbsp;</td>
+<td>Extract files from an archive (zipped) file [PS 5+]</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-authenticodesignature.html">Get-AuthenticodeSignature</a></td>
+<td>&nbsp;</td>
+<td>Get the signature object associated with a file.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-authenticodesignature.html">Set-AuthenticodeSignature</a></td>
+<td>&nbsp;</td>
+<td>Place a signature in a .ps1 script or other file.</td>
+</tr>
+<tr>
+<td><a id="b" tabindex="-1"></a><span class="ix">B</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="backup-gpo.html">Backup-GPO</a></td>
+<td>&nbsp;</td>
+<td>Backup group policy objects. (GPOs)</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="syntax-function-input.html">Begin</a></td>
+<td>&nbsp;</td>
+<td>Function BEGIN block.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="bits.html">BITS</a></td>
+<td>&nbsp;</td>
+<td>Background Intelligent Transfer Service cmdlets.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="enable-bitlocker.html">Enable-BitLocker</a></td>
+<td>&nbsp;</td>
+<td>Enable encryption for a BitLocker volume.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="enable-bitlockerautounlock.html">Enable-BitLockerAutoUnlock</a></td>
+<td>&nbsp;</td>
+<td>Enable automatic unlocking for a BitLocker volume.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="disable-bitlocker.html">Disable-BitLocker</a></td>
+<td>&nbsp;</td>
+<td>Disable encryption for a BitLocker volume.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="resume-bitlocker.html">Resume-Bitlocker</a></td>
+<td>&nbsp;</td>
+<td>Resume Bitlocker encryption for the specified volume.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="suspend-bitlocker.html">Suspend-BitLocker</a></td>
+<td>&nbsp;</td>
+<td>Suspend Bitlocker encryption for the specified volume.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="add-bitlockerkeyprotector.html">Add-BitLockerKeyProtector</a></td>
+<td>&nbsp;</td>
+<td>Add a key protector for a BitLocker volume.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-bitlockerkeyprotector.html">Remove-BitLockerKeyProtector</a></td>
+<td>&nbsp;</td>
+<td>Remove a key protector from a BitLocker volume.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-bitlockervolume.html">Get-BitLockerVolume</a></td>
+<td>&nbsp;</td>
+<td>Get information about volumes BitLocker can protect.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="break.html">Break</a></td>
+<td>&nbsp;</td>
+<td>Exit a program loop.</td>
+</tr>
+<tr>
+<td><a id="c" tabindex="-1"></a><span class="ix">C</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="try.html">Catch</a></td>
+<td>&nbsp;</td>
+<td>Handle a terminating error within a scriptblock.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="export-certificate.html">Export-Certificate</a></td>
+<td>&nbsp;</td>
+<td>Export a certificate from a certificate store into a file.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-certificate.html">Get-Certificate</a></td>
+<td>&nbsp;</td>
+<td>Submit/retrieve a certificate request to an enrollment server and install.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="import-certificate.html">Import-Certificate</a></td>
+<td>&nbsp;</td>
+<td>Import one or more certificates into a certificate store.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-location.html">Set-Location</a></td>
+<td>cd / chdir / sl</td>
+<td>Set the current working location.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-childitem.html">Get-ChildItem</a></td>
+<td>dir / ls / gci</td>
+<td>Get child items (contents of a folder or registry key).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="clear-host.html">Clear-Host</a></td>
+<td>clear / cls</td>
+<td>Clear the screen.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="clear-item.html">Clear-Item</a></td>
+<td>cli</td>
+<td>Remove content from a variable or an alias.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-cimassociatedinstance.html">Get-CimAssociatedInstance</a></td>
+<td>&nbsp;</td>
+<td>Retrieve CIM instance by an association.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-cimclass.html">Get-CimClass</a></td>
+<td>gcls</td>
+<td>Get a list of CIM classes in a specific namespace.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="register-cimindicationevent.html">Register-CimIndicationEvent</a></td>
+<td>&nbsp;</td>
+<td>Subscribe to indications using a filter or query expression.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-ciminstance.html">New-CimInstance</a></td>
+<td>ncim</td>
+<td>Create a new instance of a class.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-ciminstance.html">Get-CimInstance</a></td>
+<td>gcim</td>
+<td>Get a managed resource (storage, network, software etc).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-ciminstance.html">Remove-CimInstance</a></td>
+<td>rcim</td>
+<td>Remove a CIM instance from a computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-ciminstance.html">Set-CimInstance</a></td>
+<td>scim</td>
+<td>Modify a CIM instance on a CIM server.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="invoke-cimmethod.html">Invoke-CimMethod</a></td>
+<td>icim</td>
+<td>Invoke a method of a CIM class or CIM instance.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-cimsession.html">Get-CimSession</a></td>
+<td>gcms</td>
+<td>Get current CIM session objects.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-cimsession.html">New-CimSession</a></td>
+<td>ncms</td>
+<td>Create a CIM session.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-cimsessionoption.html">New-CimSessionOption</a></td>
+<td>&nbsp;</td>
+<td>Advanced options for New-CimSession.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-cimsession.html">Remove-CimSession</a></td>
+<td>rcms</td>
+<td>Remove one or more CIM session objects.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-clipboard.html">Get-Clipboard</a></td>
+<td>&nbsp;</td>
+<td>Get the current Windows clipboard entry.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-clipboard.html">Set-Clipboard</a></td>
+<td>&nbsp;</td>
+<td>Set the current Windows clipboard entry.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-command.html">Get-Command</a></td>
+<td>gcm</td>
+<td>Retrieve basic information about a command.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="invoke-command.html">Invoke-Command</a></td>
+<td>icm</td>
+<td>Run command.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="show-command.html">Show-Command</a></td>
+<td>shcm</td>
+<td>Create PowerShell commands in a graphical command window.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="measure-command.html">Measure-Command</a></td>
+<td>&nbsp;</td>
+<td>Measure the running time of a script block or cmdlet.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="trace-command.html">Trace-Command</a></td>
+<td>&nbsp;</td>
+<td>Trace an expression or command.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="add-computer.html">Add-Computer</a></td>
+<td>&nbsp;</td>
+<td>Add a computer to the domain.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="checkpoint-computer.html">Checkpoint-Computer</a></td>
+<td>&nbsp;</td>
+<td>Create a system restore point.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-computer.html">Remove-Computer</a></td>
+<td>&nbsp;</td>
+<td>Remove the local computer from a workgroup or domain.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="rename-computer.html">Rename-Computer</a></td>
+<td>&nbsp;</td>
+<td>Rename a computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="restart-computer.html">Restart-Computer</a></td>
+<td>&nbsp;</td>
+<td>Restart the Operating System on a computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="restore-computer.html">Restore-Computer</a></td>
+<td>&nbsp;</td>
+<td>Restore the computer to a previous state.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="stop-computer.html">Stop-Computer</a></td>
+<td>&nbsp;</td>
+<td>Stop (shut down) a computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-computerinfo.html">Get-ComputerInfo</a></td>
+<td>&nbsp;</td>
+<td>Get system and Operating System properties.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="reset-computermachinepassword.html">Reset-ComputerMachinePassword</a></td>
+<td>&nbsp;</td>
+<td>Reset the machine account password for the computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="enable-computerrestore.html">Enable-ComputerRestore</a></td>
+<td>&nbsp;</td>
+<td>Create a Restore Point.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="test-computersecurechannel.html">Test-ComputerSecureChannel</a></td>
+<td>&nbsp;</td>
+<td>Test and repair the secure channel to the domain.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="add-content.html">Add-Content</a></td>
+<td>ac</td>
+<td>Add to the content of the item.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-content.html">Get-Content</a></td>
+<td>cat / type / gc</td>
+<td>Get content from item (specific location).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-content.html">Set-Content</a></td>
+<td>sc</td>
+<td>Set content in the item (specific location).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="clear-content.html">Clear-Content</a></td>
+<td>clc</td>
+<td>Remove content from a file/item.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="continue.html">Continue</a></td>
+<td>&nbsp;</td>
+<td>Exit the current control block.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="enable-computerrestore.html">Enable-ComputerRestore</a></td>
+<td>&nbsp;</td>
+<td>Enable System Restore on a drive.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="disable-computerrestore.html">Disable-ComputerRestore</a></td>
+<td>&nbsp;</td>
+<td>Disable System Restore on a drive.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-computerrestorepoint.html">Get-ComputerRestorePoint</a></td>
+<td>&nbsp;</td>
+<td>Get the restore points on the local computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="test-connection.html">Test-Connection</a></td>
+<td>&nbsp;</td>
+<td>Ping one or more computers.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="convertfrom-csv.html">ConvertFrom-CSV</a></td>
+<td>&nbsp;</td>
+<td>Convert object properties (in CSV format) into CSV objects.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="convertto-csv.html">ConvertTo-CSV</a></td>
+<td>&nbsp;</td>
+<td>Convert  objects into CSV variable-length strings.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="convertfrom-json.html">ConvertFrom-Json</a></td>
+<td>&nbsp;</td>
+<td>Convert a JSON-formatted string to a custom object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="convertto-json.html">ConvertTo-Json</a></td>
+<td>&nbsp;</td>
+<td>Convert an object to a JSON-formatted string.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="convertto-html.html">ConvertTo-Html</a></td>
+<td>&nbsp;</td>
+<td>Convert the input into an HTML table.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="convertto-xml.html">ConvertTo-Xml</a></td>
+<td>&nbsp;</td>
+<td>Convert the input into XML.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="convertfrom-string.html">ConvertFrom-String</a></td>
+<td>cfs</td>
+<td>Extract and parse structured properties from a string.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="convertfrom-stringdata.html">ConvertFrom-StringData</a></td>
+<td>&nbsp;</td>
+<td>Convert a string containing key and value pairs into a hash table.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="convertfrom-securestring.html">ConvertFrom-SecureString</a></td>
+<td>&nbsp;</td>
+<td>Convert a secure string into an encrypted standard string.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="convertto-securestring.html">ConvertTo-SecureString</a></td>
+<td>&nbsp;</td>
+<td>Convert an encrypted standard string into a secure string.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="copy-item.html">Copy-Item</a></td>
+<td>copy / cp / cpi</td>
+<td>Copy an item from a namespace location.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="export-counter.html">Export-Counter</a></td>
+<td>&nbsp;</td>
+<td>Export Performance Counter data to log files.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-counter.html">Get-Counter</a></td>
+<td>&nbsp;</td>
+<td>Get performance counter data.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="import-counter.html">Import-Counter</a></td>
+<td>&nbsp;</td>
+<td>Import performance counter log files.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-credential.html">Get-Credential</a></td>
+<td>&nbsp;</td>
+<td>Get a security credential (username/password).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-culture.html">Get-Culture</a></td>
+<td>&nbsp;</td>
+<td>Get <a href="../tools/locale.html">region</a> information (language and keyboard layout).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-culture.html">Set-Culture</a></td>
+<td>&nbsp;</td>
+<td>Set the user culture for the current user account.</td>
+</tr>
+<tr>
+<td><a id="d" tabindex="-1"></a><span class="ix">D</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-date.html">Get-Date</a></td>
+<td>&nbsp;</td>
+<td>Get current date and time.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-date.html">Set-Date</a></td>
+<td>&nbsp;</td>
+<td>Set system time on the host system.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-childitem.html">Get-ChildItem</a></td>
+<td>Dir / ls / gci</td>
+<td>Get child items (contents of a folder or registry key).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="clear-disk.html">Clear-Disk</a></td>
+<td>&nbsp;</td>
+<td>Remove all partition information and un-initialize a disk, erasing all data.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-disk.html">Get-Disk</a></td>
+<td>&nbsp;</td>
+<td>Get one or more disks visible to the OS.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-disk.html">Set-Disk</a></td>
+<td>&nbsp;</td>
+<td>Set attributes and update a physical disk.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="initialize-disk.html">Initialize-Disk</a></td>
+<td>&nbsp;</td>
+<td>Initialize a RAW disk for first use, this enables formatting.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="update-disk.html">Update-Disk</a></td>
+<td>&nbsp;</td>
+<td>Update cached disk information.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="dismount-diskimage.html">Dismount-DiskImage</a></td>
+<td>&nbsp;</td>
+<td>Dismount a disk image (virtual hard disk or ISO).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-diskimage.html">Get-DiskImage</a></td>
+<td>&nbsp;</td>
+<td>Get one or more disk image objects (virtual hard disk or ISO).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="mount-diskimage.html">Mount-DiskImage</a></td>
+<td>&nbsp;</td>
+<td>Mount a previously created disk image (virtual HD or ISO)</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-item.html">Remove-Item</a></td>
+<td>Del / erase / rd / rm / rmdir</td>
+<td>Delete an item.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="compare-object.html">Compare-Object</a></td>
+<td>diff / compare</td>
+<td>Compare the properties of objects.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-dnsclientcache.html">Get-DnsClientCache</a></td>
+<td>&nbsp;</td>
+<td>Retrieve the content of the local DNS client cache.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="clear-dnsclientcache.html">Clear-DnsClientCache</a></td>
+<td>&nbsp;</td>
+<td>Clear the content of the DNS client cache.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-dnsclientserveraddress.html">Get-DnsClientServerAddress</a></td>
+<td>&nbsp;</td>
+<td>Get a DNS server&rsquo;s IP address from the interface TCP/IP properties.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-dnsclientserveraddress.html">Set-DnsClientServerAddress</a></td>
+<td>&nbsp;</td>
+<td>Set a DNS server&rsquo;s IP address on the interface TCP/IP properties.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="resolve-dnsname.html">Resolve-DnsName</a></td>
+<td>&nbsp;</td>
+<td>Perform a DNS name query resolution for a specified name.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="do.html">Do</a></td>
+<td>&nbsp;</td>
+<td>Loop while a condition is True.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-dscconfiguration.html">Get-DscConfiguration</a></td>
+<td>&nbsp;</td>
+<td>Get the current config. of a node.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-dsclocalconfigurationmanager.html">Get-DscLocalConfigurationManager</a></td>
+<td>&nbsp;</td>
+<td>Get Local Config Manager settings.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-dscresource.html">Get-DscResource</a></td>
+<td>&nbsp;</td>
+<td>Get Desired State Config. resources from a computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-dscchecksum.html">New-DSCCheckSum</a></td>
+<td>&nbsp;</td>
+<td>Create checksum files for DSC docs/resources.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="start-dscconfiguration.html">Start-DscConfiguration</a></td>
+<td>&nbsp;</td>
+<td>Apply Desired State config to nodes.</td>
+</tr>
+<tr>
+<td><a id="e" tabindex="-1"></a><span class="ix">E</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="write-output.html">Write-Output</a></td>
+<td>Echo</td>
+<td>Write an object to the pipeline.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="syntax-function-input.html">End</a></td>
+<td>&nbsp;</td>
+<td>Function END block.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-error.html">Get-Error</a></td>
+<td>gerr</td>
+<td>Get and display errors.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-event.html">Get-Event</a></td>
+<td>&nbsp;</td>
+<td>Get events in the PowerShell event queue.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-event.html">New-Event</a></td>
+<td>&nbsp;</td>
+<td>Create a new event.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-event.html">Remove-Event</a></td>
+<td>&nbsp;</td>
+<td>Delete events from the event queue.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="unregister-event.html">Unregister-Event</a></td>
+<td>&nbsp;</td>
+<td>Cancel an event subscription.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="wait-event.html">Wait-Event</a></td>
+<td>&nbsp;</td>
+<td>Wait until a particular event is raised.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="clear-eventlog.html">Clear-EventLog</a></td>
+<td>&nbsp;</td>
+<td>Delete all entries from an event log.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-eventlog.html">Get-Eventlog</a></td>
+<td>&nbsp;</td>
+<td>Get event log data (2003).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="limit-eventlog.html">Limit-EventLog</a></td>
+<td>&nbsp;</td>
+<td>Limit the size of the event log.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-eventlog.html">New-Eventlog</a></td>
+<td>&nbsp;</td>
+<td>Create a new event log and a new event source.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-eventlog.html">Remove-EventLog</a></td>
+<td>&nbsp;</td>
+<td>Delete an event log.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="show-eventlog.html">Show-EventLog</a></td>
+<td>&nbsp;</td>
+<td>Display an event log.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="write-eventlog.html">Write-EventLog</a></td>
+<td>&nbsp;</td>
+<td>Write an event to an event log.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-winevent.html">Get-WinEvent</a></td>
+<td>&nbsp;</td>
+<td>Get event log data.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-eventsubscriber.html">Get-EventSubscriber</a></td>
+<td>&nbsp;</td>
+<td>Get event subscribers.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="register-engineevent.html">Register-EngineEvent</a></td>
+<td>&nbsp;</td>
+<td>Subscribe to PowerShell events.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="register-objectevent.html">Register-ObjectEvent</a></td>
+<td>&nbsp;</td>
+<td>Subscribe to .NET events.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-executionpolicy.html">Get-ExecutionPolicy</a></td>
+<td>&nbsp;</td>
+<td>Get the execution policy for the shell.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-executionpolicy.html">Set-ExecutionPolicy</a></td>
+<td>&nbsp;</td>
+<td>Change the execution policy (user preference).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="export-alias.html">Export-Alias</a></td>
+<td>epal</td>
+<td>Export currently defined aliases to a file.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="export-clixml.html">Export-Clixml</a></td>
+<td>&nbsp;</td>
+<td>Produce a clixml representation of PowerShell objects.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="export-console.html">Export-Console</a></td>
+<td>&nbsp;</td>
+<td>Export console configuration to a file.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="export-csv.html">Export-Csv</a></td>
+<td>epcsv</td>
+<td>Export to Comma Separated Values (spreadsheet).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="exit-pssession.html">Exit-PSSession</a></td>
+<td>exsn</td>
+<td>Exit a PowerShell session.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="exit.html">Exit</a></td>
+<td>&nbsp;</td>
+<td>Exit a script or exit PowerShell.</td>
+</tr>
+<tr>
+<td><a id="f" tabindex="-1"></a><span class="ix">F</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="syntax-f-operator.html">-F operator</a></td>
+<td>&nbsp;</td>
+<td>Format operator.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="unblock-file.html">Unblock-File</a></td>
+<td>&nbsp;</td>
+<td>Unblock files downloaded from the Internet.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-filehash.html">Get-FileHash</a></td>
+<td>&nbsp;</td>
+<td>Compute the hash value for a file.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><abbr title="Cmdlet"><a href="foreach-object.html">ForEach-Object</a></abbr></td>
+<td><abbr title="Alias">foreach</abbr></td>
+<td>Loop through each item in the pipeline ( % ).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><abbr title="Statement"><a href="foreach.html">ForEach</a></abbr></td>
+<td>&nbsp;</td>
+<td>Loop through each item in a collection.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="foreach-method.html">ForEach</a> method </td>
+<td>&nbsp;</td>
+<td>Loop through each item in a collection.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="for.html">For</a></td>
+<td>&nbsp;</td>
+<td>Loop through items that match a condition.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="format-custom.html">Format-Custom</a></td>
+<td>fc</td>
+<td>Format output using a customized view.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="format-hex.html">Format-Hex</a></td>
+<td>fhx</td>
+<td>Display a file or other input as hexadecimal.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="format-list.html">Format-List</a></td>
+<td>fl</td>
+<td>Format output as a list of properties, each on a new line.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="format-table.html">Format-Table</a></td>
+<td>ft</td>
+<td>Format output as a table.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="format-wide.html">Format-Wide</a></td>
+<td>fw</td>
+<td>Format output as a table listing one property only.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="export-formatdata.html">Export-FormatData</a></td>
+<td>&nbsp;</td>
+<td>Save formatting data from the current session.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-formatdata.html">Get-FormatData</a></td>
+<td>&nbsp;</td>
+<td>Get the formatting data in the current session.</td>
+</tr>
+<tr>
+<td><a id="g" tabindex="-1"></a><span class="ix">G</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-item.html">Get-Item</a></td>
+<td>gi</td>
+<td>Get a file/registry object (or any other namespace object).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-childitem.html">Get-ChildItem</a></td>
+<td>dir / ls / gci</td>
+<td>Get child items (contents of a folder or registry key).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="backup-gpo.html">Backup-GPO</a></td>
+<td>&nbsp;</td>
+<td>Backup group policy objects (GPOs).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="restore-gpo.html">Restore-GPO</a></td>
+<td>&nbsp;</td>
+<td>Restore one or all GPOs from a GPO backup.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="import-gpo.html">Import-GPO</a></td>
+<td>&nbsp;</td>
+<td>Import Group Policy settings into a specified GPO from a GPO backup.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="group-object.html">Group-Object</a></td>
+<td>group</td>
+<td>Group objects that contain the same value.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-guid.html">New-Guid</a></td>
+<td>&nbsp;</td>
+<td>Create a GUID.</td>
+</tr>
+<tr>
+<td><a id="h" tabindex="-1"></a>H</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-help.html">Get-Help</a></td>
+<td>help</td>
+<td>Open the help file.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="update-help.html">Update-Help</a></td>
+<td>&nbsp;</td>
+<td>Download and install the newest help files on your computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="add-history.html">Add-History</a></td>
+<td>&nbsp;</td>
+<td>Add entries to the session history.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="clear-history.html">Clear-History</a></td>
+<td>clhy</td>
+<td>Delete entries from the session history.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-history.html">Get-History</a></td>
+<td>history / h / ghy</td>
+<td>Get a listing of the session history.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="invoke-history.html">Invoke-History</a></td>
+<td>r / ihy</td>
+<td>Invoke a previously executed Cmdlet.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-host.html">Get-Host</a></td>
+<td>&nbsp;</td>
+<td>Get host information (PowerShell Version and Region).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="clear-host.html">Clear-Host</a></td>
+<td>clear / cls</td>
+<td>Clear the screen.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="out-host.html">Out-Host</a></td>
+<td>oh</td>
+<td>Send output to the host.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="read-host.html">Read-Host</a></td>
+<td>&nbsp;</td>
+<td>Read a line of user input from the host console.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="write-host.html">Write-Host</a></td>
+<td>&nbsp;</td>
+<td>Write customized output to the host/screen.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-hotfix.html">Get-HotFix</a></td>
+<td>&nbsp;</td>
+<td>Get Installed hotfixes.</td>
+</tr>
+<tr>
+<td><a id="i" tabindex="-1"></a><span class="ix">I</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="if.html">IF</a></td>
+<td>&nbsp;</td>
+<td>Conditionally perform a command.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="invoke-cimmethod.html">Invoke-CimMethod</a></td>
+<td>icim</td>
+<td>Invoke a method of a CIM class or CIM instance.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="import-clixml.html">Import-Clixml</a></td>
+<td>&nbsp;</td>
+<td>Import a clixml file and rebuild the PS object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="import-csv.html">Import-Csv</a></td>
+<td>ipcsv</td>
+<td>Take values from a CSV list and send objects down the pipeline.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="import-pfxcertificate.html">Import-PfxCertificate</a></td>
+<td>&nbsp;</td>
+<td>Import certificates and keys from a Personal Information Exchange (PFX) file.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="write-information.html">Write-Information</a></td>
+<td>&nbsp;</td>
+<td>Specify how PowerShell should handle information stream data.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-initiatorport.html">Get-InitiatorPort</a></td>
+<td>&nbsp;</td>
+<td>Get one or more host bus adapter (HBA) initiator ports.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="install-module.html">Install-Module</a></td>
+<td>&nbsp;</td>
+<td>Download and install one or more modules from an online gallery.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="install-package.html">Install-Package</a></td>
+<td>&nbsp;</td>
+<td>Install one or more software packages.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="invoke-command.html">Invoke-Command</a></td>
+<td>icm</td>
+<td>Run commands on local and remote computers.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="invoke-expression.html">Invoke-Expression</a></td>
+<td>iex</td>
+<td>Run a PowerShell expression.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="invoke-webrequest.html">Invoke-WebRequest</a></td>
+<td>iwr</td>
+<td>Get content from a web page.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="invoke-restmethod.html">Invoke-RestMethod</a></td>
+<td>irm</td>
+<td>Send an HTTP or HTTPS request to a RESTful web service.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-netipaddress.html">Get-NetIPAddress</a></td>
+<td>&nbsp;</td>
+<td>Get IPAddress configuration</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-item.html">Get-Item</a></td>
+<td>gi</td>
+<td>Get a file object or get a registry (or other namespace) object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="invoke-item.html">Invoke-Item</a></td>
+<td>ii</td>
+<td>Invoke an executable or open a file (START).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-item.html">New-Item</a></td>
+<td>md / mkdir / ni</td>
+<td>Create a new item in a namespace.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-item.html">Remove-Item</a></td>
+<td>del / erase / rd / ri / rm/ rmdir</td>
+<td>Remove an item.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-item.html">Set-Item</a></td>
+<td>si</td>
+<td>Change the value of an item.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="clear-itemproperty.html">Clear-ItemProperty</a></td>
+<td>clp</td>
+<td>Remove the property value from a property.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="copy-itemproperty.html">Copy-ItemProperty</a></td>
+<td>cpp</td>
+<td>Copy a property along with its value.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-itemproperty.html">Get-ItemProperty</a></td>
+<td>gp</td>
+<td>Retrieve the properties of an object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="move-itemproperty.html">Move-ItemProperty</a></td>
+<td>mp</td>
+<td>Move a property from one location to another.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-itemproperty.html">New-ItemProperty</a></td>
+<td>&nbsp;</td>
+<td>Set a new property.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-itemproperty.html">Remove-ItemProperty</a></td>
+<td>rp</td>
+<td>Remove a property and its value.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="rename-itemproperty.html">Rename-ItemProperty</a></td>
+<td>rnp</td>
+<td>Rename a property at its location.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-itemproperty.html">Set-ItemProperty</a></td>
+<td>sp</td>
+<td>Set a property at the specified location to a specified value.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-itempropertyvalue.html">Get-ItemPropertyValue</a></td>
+<td>gpv</td>
+<td>Get the value for one or more properties of a specified item.</td>
+</tr>
+<tr>
+<td><a id="j" tabindex="-1"></a><span class="ix">J</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-job.html">Get-Job</a></td>
+<td>gjb</td>
+<td>Get PowerShell background jobs that are running.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="receive-job.html">Receive-Job</a></td>
+<td>rcjb</td>
+<td>Get PowerShell background job results.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-job.html">Remove-Job</a></td>
+<td>rjb</td>
+<td>Delete a PowerShell background job.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="start-job.html">Start-Job</a></td>
+<td>sajb</td>
+<td>Start a PowerShell background job.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="stop-job.html">Stop-Job</a></td>
+<td>spjb</td>
+<td>Stop a PowerShell background job.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="wait-job.html">Wait-Job</a></td>
+<td>wjb</td>
+<td>Wait for a background job.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="scheduler.html">Job Trigger cmdlets</a></td>
+<td>&nbsp;</td>
+<td>Get/Set Scheduled job triggers.</td>
+</tr>
+<tr>
+<td><a id="k" tabindex="-1"></a><span class="ix">K</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="stop-process.html">Stop-Process</a></td>
+<td>kill / spps</td>
+<td>Stop a running process.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Add-KdsRootKey</td>
+<td>&nbsp;</td>
+<td>Generate a new root key for the Key Distribution Service in AD.</td>
+</tr>
+<tr>
+<td><a id="l" tabindex="-1"></a><span class="ix">L</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="update-list.html">Update-List</a></td>
+<td>&nbsp;</td>
+<td>Add and remove items from a collection.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="update-list.html"></a><a href="new-localgroup.html">New-LocalGroup</a></td>
+<td>&nbsp;</td>
+<td>Add a new local security group.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-localgroup.html">Get-LocalGroup</a></td>
+<td>&nbsp;</td>
+<td>Get the local security groups.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-localgroup.html">Remove-LocalGroup</a></td>
+<td>&nbsp;</td>
+<td>Remove a local security group.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="rename-localgroup.html">Rename-LocalGroup</a></td>
+<td>&nbsp;</td>
+<td>Rename a local security group.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-localgroup.html">Set-LocalGroup</a></td>
+<td>&nbsp;</td>
+<td>Change a local security group.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Add-LocalGroupMember</td>
+<td>&nbsp;</td>
+<td>Add members to a local group.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-LocalGroupMember</td>
+<td>&nbsp;</td>
+<td>Get members from a local group.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-localuser.html">Get-LocalUser</a></td>
+<td>&nbsp;</td>
+<td>Get a local user account.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-localuser.html">New-LocalUser</a></td>
+<td>&nbsp;</td>
+<td>Create a local user account.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-localuser.html">Set-LocalUser</a></td>
+<td>&nbsp;</td>
+<td>Modify a local user account.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-location.html">Get-Location</a></td>
+<td>pwd / gl</td>
+<td>Get and display the current location.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="pop-location.html">Pop-Location</a></td>
+<td>popd</td>
+<td>Set the current working location from the stack.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="push-location.html">Push-Location</a></td>
+<td>pushd</td>
+<td>Push a location to the stack.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-location.html">Set-Location</a></td>
+<td>cd / chdir / sl</td>
+<td>Set the current working location.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-winsystemlocale.html">Get-WinSystemLocale</a></td>
+<td>&nbsp;</td>
+<td>Get the System-locale setting for the current computer.</td>
+</tr>
+<tr>
+<td><a id="m" tabindex="-1"></a><span class="ix">M</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="send-mailmessage.html">Send-MailMessage</a></td>
+<td>&nbsp;</td>
+<td> Send an email message.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="measure-object.html">Measure-Object</a></td>
+<td>measure</td>
+<td>Measure the properties of an object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="add-member.html">Add-Member</a></td>
+<td>&nbsp;</td>
+<td>Add a member to an instance of a PowerShell object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-member.html">Get-Member</a></td>
+<td>gm</td>
+<td>Enumerate the properties of an object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="messagebox.html">MessageBox</a></td>
+<td>&nbsp;</td>
+<td>Display a message box to the user</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Find-Module</td>
+<td>&nbsp;</td>
+<td>Find modules from an online gallery.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-module.html">Get-Module</a></td>
+<td>gmo</td>
+<td>Get the modules imported to the session.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="import-module.html">Import-Module</a></td>
+<td>ipmo</td>
+<td>Add a module to the session.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="install-module.html">Install-Module</a></td>
+<td>&nbsp;</td>
+<td>Download and install modules from an online repository.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-module.html">New-Module</a></td>
+<td>nmo</td>
+<td>Create a new dynamic module (only in memory).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-module.html">Remove-Module</a></td>
+<td>rmo</td>
+<td>Remove a module from the current session.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Save-Module</td>
+<td>&nbsp;</td>
+<td>Save a module locally without installing it.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-InstalledModule</td>
+<td>&nbsp;</td>
+<td>Get installed modules on a computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="uninstall-module.html">Uninstall-Module</a></td>
+<td>&nbsp;</td>
+<td>Uninstall a module.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="update-module.html">Update-Module</a></td>
+<td>&nbsp;</td>
+<td>Download/install a new module version.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="export-modulemember.html">Export-ModuleMember</a></td>
+<td>&nbsp;</td>
+<td>Export specific module members.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="move-item.html">Move-Item</a></td>
+<td>mv / move / mi</td>
+<td>Move an item from one location to another.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-mppreference.html">Set-MpPreference</a></td>
+<td>&nbsp;</td>
+<td>Configure preferences for Windows Defender.</td>
+</tr>
+<tr>
+<td><a id="n" tabindex="-1"></a><span class="ix">N</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-netadapter.html">Get-NetAdapter</a></td>
+<td>&nbsp;</td>
+<td>Get the basic network adapter properties.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-NetAdapter</td>
+<td>&nbsp;</td>
+<td>Set the basic network adapter properties.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Disable-NetAdapterBinding</td>
+<td>&nbsp;</td>
+<td>Disable a binding to a network adapter.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-NetAdapterVmq</td>
+<td>&nbsp;</td>
+<td>Get the VMQ properties of a network adapter.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-NetAdapterVmq</td>
+<td>&nbsp;</td>
+<td>Set the VMQ properties of a network adapter.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="test-netconnection.html">Test-NetConnection</a></td>
+<td>tnc</td>
+<td>Display diagnostic information for a connection.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-NetConnectionProfile</td>
+<td>&nbsp;</td>
+<td>Get a connection profile.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-NetConnectionProfile</td>
+<td>&nbsp;</td>
+<td>Set a connection profile.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-NetFirewallProfile</td>
+<td>&nbsp;</td>
+<td>Configure per-profile settings of Windows Firewall.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Enable-NetFirewallRule</td>
+<td>&nbsp;</td>
+<td>Enable a previously disabled firewall rule.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-NetFirewallRule</td>
+<td>&nbsp;</td>
+<td>Modify existing firewall rules.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-NetFirewallRule</td>
+<td>&nbsp;</td>
+<td>Retrieve firewall rules from the target computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>New-NetFirewallRule</td>
+<td>&nbsp;</td>
+<td>Create a new firewall rule and add to a target computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-netipaddress.html">Get-NetIPAddress</a></td>
+<td>&nbsp;</td>
+<td>Get IP address configuration.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>New-NetIPAddress</td>
+<td>&nbsp;</td>
+<td>Create and configure an IP address.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Remove-NetIPAddress</td>
+<td>&nbsp;</td>
+<td>Remove an IP address and its configuration.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-NetIPAddress</td>
+<td>&nbsp;</td>
+<td>Modify the configuration of an IP address.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-netipconfiguration.html">Get-NetIPConfiguration</a></td>
+<td>&nbsp;</td>
+<td>Get IP network configuration.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-NetIPInterface</td>
+<td>&nbsp;</td>
+<td>Get an IP interface.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-NetIPInterface</td>
+<td>&nbsp;</td>
+<td>Modify an IP interface.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>New-NetLbfoTeam</td>
+<td>&nbsp;</td>
+<td>Create a new NIC team.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>New-NetNat</td>
+<td>&nbsp;</td>
+<td>Create a NAT object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>New-NetRoute</td>
+<td>&nbsp;</td>
+<td>Create a route in the IP routing table.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-nettcpconnection.html">Get-NetTCPConnection</a></td>
+<td>&nbsp;</td>
+<td>Get TCP connections.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-nettcpsetting.html">Set-NetTCPSetting</a></td>
+<td>&nbsp;</td>
+<td>Modify a TCP setting.</td>
+</tr>
+<tr>
+<td><a id="o" tabindex="-1"></a><span class="ix">O</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="compare-object.html">Compare-Object</a></td>
+<td>diff / compare</td>
+<td>Compare the properties of objects.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="group-object.html">Group-Object</a></td>
+<td>group</td>
+<td>Group objects that contain the same value.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="measure-object.html">Measure-Object</a></td>
+<td>&nbsp;</td>
+<td>Measure the properties of an object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-object.html">New-Object</a></td>
+<td>&nbsp;</td>
+<td>Create a new .Net object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="select-object.html">Select-Object</a></td>
+<td>select</td>
+<td>Select properties of objects.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="sort-object.html">Sort-Object</a></td>
+<td>sort</td>
+<td>Sort objects by property value.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="where-object.html">Where-Object</a></td>
+<td>&nbsp;</td>
+<td>Filter the objects passed along the command pipeline.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Add-OdbcDsn</td>
+<td>&nbsp;</td>
+<td>Add an ODBC DSN.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="out-default.html">Out-Default</a></td>
+<td>&nbsp;</td>
+<td>Set the destination of default output.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="out-file.html">Out-File</a></td>
+<td>&gt;</td>
+<td>Send output to a file.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="out-gridview.html">Out-GridView</a></td>
+<td>ogv</td>
+<td>Send output to an interactive table.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="out-host.html">Out-Host</a></td>
+<td>oh</td>
+<td>Send output to the host.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="out-null.html">Out-Null</a></td>
+<td>&nbsp;</td>
+<td>Send output to null.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="out-printer.html">Out-Printer</a></td>
+<td>lp</td>
+<td>Send the output to a printer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="out-string.html">Out-String</a></td>
+<td>&nbsp;</td>
+<td>Send objects to the host as strings.</td>
+</tr>
+<tr>
+<td><a id="p" tabindex="-1"></a><span class="ix">P</span><a id="q" tabindex="-1"></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-Package</td>
+<td>&nbsp;</td>
+<td>Return a list of all software packages installed using Package Management.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Find-Package</td>
+<td>&nbsp;</td>
+<td>Find software packages in available package sources.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="install-package.html">Install-Package</a></td>
+<td>&nbsp;</td>
+<td>Install one or more software packages.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Uninstall-Package</td>
+<td>&nbsp;</td>
+<td>Uninstall one or more software packages.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Install-PackageProvider</td>
+<td>&nbsp;</td>
+<td>Install one or more Package Management package providers.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="syntax-args.html">Param</a></td>
+<td>&nbsp;</td>
+<td>Script Parameters.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-Partition</td>
+<td>&nbsp;</td>
+<td>Return a list of partition objects.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>New-Partition</td>
+<td>&nbsp;</td>
+<td>Create a new partition on an existing Disk object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Resize-Partition</td>
+<td>&nbsp;</td>
+<td>Resize a partition and the underlying file system.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-Partition</td>
+<td>&nbsp;</td>
+<td>Set attributes of a partition: active, read-only, offline.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="convert-path.html">Convert-Path</a></td>
+<td>cvpa</td>
+<td>Convert a ps path to a provider path.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="join-path.html">Join-Path</a></td>
+<td>&nbsp;</td>
+<td>Combine a path and one or more child-paths.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="resolve-path.html">Resolve-Path</a></td>
+<td>rvpa</td>
+<td>Resolves the wildcards in a path.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="split-path.html">Split-Path</a></td>
+<td>&nbsp;</td>
+<td>Return part of a path.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="test-path.html">Test-Path</a></td>
+<td>&nbsp;</td>
+<td>Return true if the path exists, otherwise return false.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="pause.html">Pause</a></td>
+<td>&nbsp;</td>
+<td>Pause and display the message &quot;Press Enter to continue...&quot;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Invoke-Pester</td>
+<td>&nbsp;</td>
+<td>Invoke Pester to recursively run all tests.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="export-pfxcertificate.html">Export-PfxCertificate</a></td>
+<td>&nbsp;</td>
+<td>Export a certificate or a PFXData object to a PFX file.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-pfxcert.html">Get-PfxCertificate</a></td>
+<td>&nbsp;</td>
+<td>Get pfx certificate information.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-PhysicalDisk</td>
+<td>&nbsp;</td>
+<td>Retrieve a list of Physical Disk objects.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Remove-PhysicalDisk</td>
+<td>&nbsp;</td>
+<td>Remove a physical disk from a specified storage pool.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-PhysicalDisk</td>
+<td>&nbsp;</td>
+<td>Set attributes on a specific physical disk.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-PnpDevice</td>
+<td>&nbsp;</td>
+<td>Return information about PnP devices.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="pop-location.html">Pop-Location</a></td>
+<td>popd</td>
+<td>Set the current working location from the stack.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="push-location.html">Push-Location</a></td>
+<td>pushd</td>
+<td>Push a location to the stack.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="powershell.html">Powershell</a></td>
+<td><a href="pwsh.html">pwsh</a></td>
+<td>Launch a PowerShell session/run a script.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="add-printer.html">Add-Printer</a></td>
+<td>&nbsp;</td>
+<td>Add a printer to the specified computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-printer.html">Get-Printer</a></td>
+<td>&nbsp;</td>
+<td>Retrieve a list of printers installed on a computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-printer.html">Remove-Printer</a></td>
+<td>&nbsp;</td>
+<td>Remove a printer from the specified computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-printer.html">Set-Printer</a></td>
+<td>&nbsp;</td>
+<td>Update the configuration of an existing printer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-printconfiguration.html">Set-PrintConfiguration</a></td>
+<td>&nbsp;</td>
+<td>Update the configuration information of a printer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="add-printerdriver.html">Add-PrinterDriver</a></td>
+<td>&nbsp;</td>
+<td>Install a printer driver on the computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-printerdriver.html">Get-PrinterDriver</a></td>
+<td>&nbsp;</td>
+<td>Retrieve a list of installed print drivers.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="add-printerport.html">Add-PrinterPort</a></td>
+<td>&nbsp;</td>
+<td>Install a printer port on the computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-printerport.html">Get-PrinterPort</a></td>
+<td>&nbsp;</td>
+<td>Retrieve a list of printer ports.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-printjob.html">Get-PrintJob</a></td>
+<td>&nbsp;</td>
+<td>Retrieve a list of print jobs.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="syntax-function-input.html">Process</a></td>
+<td>&nbsp;</td>
+<td>Function PROCESS block.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-process.html">Get-Process</a></td>
+<td>ps / gps</td>
+<td>Get a list of processes on a machine.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Debug-Process</td>
+<td>&nbsp;</td>
+<td>Attach a debugger to a running process.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="start-process.html">Start-Process</a></td>
+<td>start / saps</td>
+<td>Start one or more processes.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="stop-process.html">Stop-Process</a></td>
+<td>kill / spps</td>
+<td>Stop a running process.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="wait-process.html">Wait-Process</a></td>
+<td>&nbsp;</td>
+<td>Wait for a process to stop.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="enable-psbreakpoint.html">Enable-PSBreakpoint</a></td>
+<td>ebp</td>
+<td>Enable a breakpoint in the current console.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="disable-psbreakpoint.html">Disable-PSBreakpoint</a></td>
+<td>dbp</td>
+<td>Disable a breakpoint in the current console.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-psbreakpoint.html">Get-PSBreakpoint</a></td>
+<td>gbp</td>
+<td>Get the currently set breakpoints.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-psbreakpoint.html">Set-PSBreakpoint</a></td>
+<td>sbp</td>
+<td>Set a breakpoint on a line, command, or variable.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-psbreakpoint.html">Remove-PSBreakpoint</a></td>
+<td>rbp</td>
+<td>Delete breakpoints from the current console.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-pscallstack.html">Get-PSCallStack</a></td>
+<td>gcs</td>
+<td>Display the current call stack.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-psdrive.html">Get-PSDrive</a></td>
+<td>gdr</td>
+<td>Get drive information (DriveInfo).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-psdrive.html">New-PSDrive</a></td>
+<td>mount / ndr</td>
+<td>Create a mapped network drive.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-psdrive.html">Remove-PSDrive</a></td>
+<td>rdr</td>
+<td>Remove a provider/drive from its location.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-psprovider.html">Get-PSProvider</a></td>
+<td>&nbsp;</td>
+<td>Get information for the specified provider.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-psdebug.html">Set-PSdebug</a></td>
+<td>&nbsp;</td>
+<td>Turn script debugging on or off.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="disable-psremoting.html">Disable-PSRemoting</a></td>
+<td>&nbsp;</td>
+<td>Disable remote session configuration on the local computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="enable-psremoting.html">Enable-PSRemoting</a></td>
+<td>&nbsp;</td>
+<td>Configure the computer to receive remote commands.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-PSRepository</td>
+<td>&nbsp;</td>
+<td>Get PowerShell repositories.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Register-PSRepository</td>
+<td>&nbsp;</td>
+<td>Register a PowerShell repository.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-PSRepository</td>
+<td>&nbsp;</td>
+<td>Set values for a registered repository.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="connect-pssession.html">Connect-PSSession</a></td>
+<td>cnsn</td>
+<td>Reconnect to a disconnected session.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="disconnect-pssession.html">Disconnect-PSSession</a></td>
+<td>dnsn</td>
+<td>Disconnect from a session.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="enter-pssession.html">Enter-PSSession</a></td>
+<td>etsn</td>
+<td>Start an interactive session with a remote computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="exit-pssession.html">Exit-PSSession</a></td>
+<td>exsn</td>
+<td>End an interactive session with a remote computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="export-pssession.html">Export-PSSession</a></td>
+<td>epsn</td>
+<td>Import commands and save them in a PowerShell module.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-pssession.html">Get-PSSession</a></td>
+<td>gsn</td>
+<td>Get the PSSessions in the current session.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="import-pssession.html">Import-PSSession</a></td>
+<td>ipsn</td>
+<td>Import commands from another session.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-pssession.html">New-PSSession</a></td>
+<td>nsn</td>
+<td>Create a persistent connection to a local or remote computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Receive-PSSession</td>
+<td>rcsn</td>
+<td>Receive a PSSession.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-pssession.html">Remove-PSSession</a></td>
+<td>rsn</td>
+<td>Close PowerShell sessions.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="disable-pssessionconfiguration.html">Disable-PSSessionConfiguration</a></td>
+<td>&nbsp;</td>
+<td>Disable session configurations on the local computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="enable-pssessionconfiguration.html">Enable-PSSessionConfiguration</a></td>
+<td>&nbsp;</td>
+<td>Enable session configurations on the local computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-pssessionconfiguration.html">Get-PSSessionConfiguration</a></td>
+<td>&nbsp;</td>
+<td>Get the registered PS session configuration.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="register-pssessionconfiguration.html">Register-PSSessionConfiguration</a></td>
+<td>&nbsp;</td>
+<td>Create and register a new PS session configuration.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-pssessionconfiguration.html">Set-PSSessionConfiguration</a></td>
+<td>&nbsp;</td>
+<td>Change properties of a registered session configuration.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="unregister-pssessionconfiguration.html">Unregister-PSSessionConfiguration</a></td>
+<td>&nbsp;</td>
+<td>Delete registered PS session configuration.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>New-PSSessionConfigurationFile</td>
+<td>&nbsp;</td>
+<td>Create a file that defines a session configuration.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-pssessionoption.html">New-PSSessionOption</a></td>
+<td>&nbsp;</td>
+<td>Advanced options for a PSSession.</td>
+</tr>
+<tr>
+<td><a id="r" tabindex="-1"></a><span class="ix">R</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-random.html">Get-Random</a></td>
+<td>&nbsp;</td>
+<td>Get a random number.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="read-host.html">Read-Host</a></td>
+<td>&nbsp;</td>
+<td>Read a line of input from the host console.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Clear-RecycleBin</td>
+<td>&nbsp;</td>
+<td>Clear the RecycleBin.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-item.html">Remove-Item</a></td>
+<td>del / erase / rd / ri / rm / rmdir</td>
+<td>Remove an item.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="rename-item.html">Rename-Item</a></td>
+<td>ren / rni</td>
+<td>Change the name of an existing item.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="rename-itemproperty.html">Rename-ItemProperty</a></td>
+<td>rnp</td>
+<td>Rename a property of an item.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="restart-computer.html">Restart-Computer</a></td>
+<td>&nbsp;</td>
+<td>Restart the Operating System on a computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="return.html">Return</a></td>
+<td>&nbsp;</td>
+<td>Exit the current scope, (function, script, or script block).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="call.html">Run/Call</a></td>
+<td>&nbsp;&amp;&nbsp;</td>
+<td>Run a command (call operator).</td>
+</tr>
+<tr>
+<td><a id="s" tabindex="-1"></a><span class="ix">S</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="scheduler.html">Scheduler cmdlets</a></td>
+<td>&nbsp;</td>
+<td>Get/Set scheduled jobs.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Confirm-SecureBootUEFI</td>
+<td>&nbsp;</td>
+<td>Confirm that Secure Boot is enabled on the local computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="select-object.html">Select-Object</a></td>
+<td>select</td>
+<td>Select properties of objects.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="select-xml.html">Select-XML</a></td>
+<td>&nbsp;</td>
+<td>Find text in an XML string or document.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>New-SelfSignedCertificate</td>
+<td>&nbsp;</td>
+<td>Create a new self-signed certificate for testing purposes.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="send-mailmessage.html">Send-MailMessage</a></td>
+<td>&nbsp;</td>
+<td>Send an email message.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-service.html">Get-Service</a></td>
+<td>gsv</td>
+<td>Get a list of services.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-service.html">New-Service</a></td>
+<td>&nbsp;</td>
+<td>Create a new service.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-service.html">Remove-Service</a></td>
+<td>&nbsp;</td>
+<td>Remove a service</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="restart-service.html">Restart-Service</a></td>
+<td>&nbsp;</td>
+<td>Stop and then restart a service.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="resume-service.html">Resume-Service</a></td>
+<td>&nbsp;</td>
+<td>Resume a suspended service.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-service.html">Set-Service</a></td>
+<td>&nbsp;</td>
+<td>Change the start mode/properties of a service.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="start-service.html">Start-Service</a></td>
+<td>sasv</td>
+<td>Start a stopped service.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="stop-service.html">Stop-Service</a></td>
+<td>spsv</td>
+<td>Stop a running service.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="suspend-service.html">Suspend-Service</a></td>
+<td>&nbsp;</td>
+<td>Suspend a running service.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="sort-object.html">Sort-Object</a></td>
+<td>sort</td>
+<td>Sort objects by property value.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-smbconnection.html">Get-SmbConnection</a></td>
+<td>&nbsp;</td>
+<td>Retrieve the connections established from the SMB client to the SMB servers.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-SmbOpenFile</td>
+<td>&nbsp;</td>
+<td>Information about files that are open on behalf of SMB server clients.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-smbmapping.html">Get-SMBMapping</a></td>
+<td>&nbsp;</td>
+<td>Get an SMB mapping.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-smbmapping.html">New-SmbMapping</a></td>
+<td>&nbsp;</td>
+<td>Create an SMB mapping.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-smbmapping.html">Remove-SmbMapping</a></td>
+<td>&nbsp;</td>
+<td>Remove an SMB mapping.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-SmbSession</td>
+<td>&nbsp;</td>
+<td>Retrieve information about current SMB sessions.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-SmbClientConfiguration</td>
+<td>&nbsp;</td>
+<td>Set the SMB client configuration.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-SmbServerConfiguration</td>
+<td>&nbsp;</td>
+<td>Get the SMB Server configuration.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-SmbServerConfiguration</td>
+<td>&nbsp;</td>
+<td>Set the SMB Server configuration.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-smbshare.html">Get-SmbShare</a></td>
+<td>&nbsp;</td>
+<td>Retrieve the SMB shares on the computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-smbshare.html">Set-SmbShare</a></td>
+<td>&nbsp;</td>
+<td>Modify the properties of an SMB share.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-smbshare.html">New-SmbShare</a></td>
+<td>&nbsp;</td>
+<td>Create an SMB share.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Remove-SmbShare</td>
+<td>&nbsp;</td>
+<td>Remove an SMB share.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-SmbShareAccess</td>
+<td>&nbsp;</td>
+<td>Retrieve the ACL of an SMB share.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Grant-SmbShareAccess</td>
+<td>&nbsp;</td>
+<td>Add an allow ACE for a trustee to the security descriptor of the SMB share.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-strictmode.html">Set-StrictMode</a></td>
+<td>&nbsp;</td>
+<td>Enforce coding rules in expressions &amp; scripts.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-startapps.html">Get-StartApps</a></td>
+<td>&nbsp;</td>
+<td>Get the names and IDs of apps installed on the Start Menu.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="export-startlayout.html">Export-StartLayout</a></td>
+<td>&nbsp;</td>
+<td>Export layout of the Start screen as an .xml file.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="import-startlayout.html">Import-StartLayout</a></td>
+<td>&nbsp;</td>
+<td>Import the layout of the Start into a mounted Windows image.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="start-sleep.html">Start-Sleep</a></td>
+<td>sleep</td>
+<td>Suspend shell, script, or runspace activity.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-StorageJob</td>
+<td>&nbsp;</td>
+<td>Information about long-running Storage module jobs, such as a repair task.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>New-StoragePool</td>
+<td>&nbsp;</td>
+<td>Create a new storage pool using a group of physical disks.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="switch.html">Switch</a></td>
+<td>&nbsp;</td>
+<td>Check multiple conditions.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="convertfrom-stringdata.html">ConvertFrom-StringData</a></td>
+<td>&nbsp;</td>
+<td>Convert a here-string into a hash table.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="select-string.html">Select-String</a></td>
+<td>sls</td>
+<td>Search through strings or files for patterns.</td>
+</tr>
+<tr>
+<td><a id="t" tabindex="-1"></a><span class="ix">T</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="tee-object.html">Tee-Object</a></td>
+<td>tee</td>
+<td>Send input objects to two places.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-timespan.html">New-Timespan</a></td>
+<td>&nbsp;</td>
+<td>Create a timespan object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-timezone.html">Get-TimeZone</a></td>
+<td>gtz</td>
+<td>Get the current time zone or a list of available time zones.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-timezone.html">Set-TimeZone</a></td>
+<td>stz</td>
+<td>Set the system time zone to a specified time zone.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-TlsCipherSuite</td>
+<td>&nbsp;</td>
+<td>Get the list of cipher suites for TLS for a computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-Tpm</td>
+<td>&nbsp;</td>
+<td>Trusted Platform Module (TPM).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="trace-command.html">Trace-Command</a></td>
+<td>trcm</td>
+<td>Trace an expression or command.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-tracesource.html">Get-Tracesource</a></td>
+<td>&nbsp;</td>
+<td>Get components that are instrumented for tracing.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-tracesource.html">Set-Tracesource</a></td>
+<td>&nbsp;</td>
+<td>Trace a PowerShell component.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="start-transaction.html">Start-Transaction</a></td>
+<td>&nbsp;</td>
+<td>Start a new transaction.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="complete-transaction.html">Complete-Transaction</a></td>
+<td>&nbsp;</td>
+<td>Commit the transaction.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-transaction.html">Get-Transaction</a></td>
+<td>&nbsp;</td>
+<td>Get information about the active transaction.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="use-transaction.html">Use-Transaction</a></td>
+<td>&nbsp;</td>
+<td>Add a command or expression to the transaction.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="undo-transaction.html">Undo-Transaction</a></td>
+<td>&nbsp;</td>
+<td>Roll back a transaction.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="start-transcript.html">Start-Transcript</a></td>
+<td>&nbsp;</td>
+<td>Start a transcript of a command shell session.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="stop-transcript.html">Stop-Transcript</a></td>
+<td>&nbsp;</td>
+<td>Stop the transcription process.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="trap.html">Trap</a></td>
+<td>&nbsp;</td>
+<td>Handle a terminating error.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="try.html">Try ... Catch</a></td>
+<td>&nbsp;</td>
+<td>Handle a terminating error within a scriptblock.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="add-type.html">Add-Type</a></td>
+<td>&nbsp;</td>
+<td>Add a .NET Framework type to a PowerShell session.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="update-typedata.html">Update-TypeData</a></td>
+<td>&nbsp;</td>
+<td>Update extended type configuration.</td>
+</tr>
+<tr>
+<td><a id="u" tabindex="-1"></a><span class="ix">U</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-uiculture.html">Get-Uiculture</a></td>
+<td>&nbsp;</td>
+<td>Get the ui culture information.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="unblock-file.html">Unblock-File</a></td>
+<td>&nbsp;</td>
+<td>Unblock files downloaded from the Internet.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-unique.html">Get-Unique</a></td>
+<td>gu</td>
+<td>Get the unique items in a collection.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="update-formatdata.html">Update-Formatdata</a></td>
+<td>&nbsp;</td>
+<td>Update and append format data files.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="update-help.html">Update-Help</a></td>
+<td>&nbsp;</td>
+<td>Download and install help files.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="update-typedata.html">Update-Typedata</a></td>
+<td>&nbsp;</td>
+<td>Update the current extended type configuration.</td>
+</tr>
+<tr>
+<td><a id="v" tabindex="-1"></a><span class="ix">V</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="clear-variable.html">Clear-Variable</a></td>
+<td>clv</td>
+<td>Remove the value from a variable.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-variable.html">Get-Variable</a></td>
+<td>gv</td>
+<td>Get a PowerShell variable.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-variable.html">New-Variable</a></td>
+<td>nv</td>
+<td>Create a new variable.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-variable.html">Remove-Variable</a></td>
+<td>rv</td>
+<td>Remove a variable and its value.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-variable.html">Set-Variable</a></td>
+<td>set / sv</td>
+<td>Set a variable and a value.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-VirtualDisk</td>
+<td>&nbsp;</td>
+<td>Return a list of VirtualDisks across storage pools/providers.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>New-VirtualDisk</td>
+<td>&nbsp;</td>
+<td>Create a new virtual disk in the specified storage pool.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-Volume</td>
+<td>&nbsp;</td>
+<td>Get the specified Volume object, or all Volume objects.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Format-Volume</td>
+<td>&nbsp;</td>
+<td>Format one or more volumes.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>New-Volume</td>
+<td>&nbsp;</td>
+<td>Create a volume with the specified file system.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Optimize-Volume</td>
+<td>&nbsp;</td>
+<td>Optimize a volume.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Repair-Volume</td>
+<td>&nbsp;</td>
+<td>Perform repairs on a volume.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Add-VpnConnection</td>
+<td>&nbsp;</td>
+<td>Add a VPN connection to the Connection Manager phone book.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-VpnConnection</td>
+<td>&nbsp;</td>
+<td>Retrieve the specified VPN connection profile information.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-VpnConnection</td>
+<td>&nbsp;</td>
+<td>Change the config. of a VPN connection profile.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Add-VpnConnectionRoute</td>
+<td>&nbsp;</td>
+<td>Add a route to a VPN connection.</td>
+</tr>
+<tr>
+<td><a id="w" tabindex="-1"></a><span class="ix">W</span><a id="x" tabindex="-1"></a><a id="y" tabindex="-1"></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="checkpoint-webapplicationmonitoring.html">Checkpoint-WebApplicationMonitoring</a></td>
+<td>&nbsp;</td>
+<td>Create a checkpoint for an IIS web app.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-webapplicationmonitoringstatus.html">Get-WebApplicationMonitoringStatus</a></td>
+<td>&nbsp;</td>
+<td>Get the monitoring status of web apps.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-webserviceproxy.html">New-WebServiceProxy</a></td>
+<td>&nbsp;</td>
+<td>Create a Web service proxy object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="invoke-webrequest.html">Invoke-WebRequest</a></td>
+<td>iwr</td>
+<td>Get content from a web page.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="where-object.html">Where-Object</a></td>
+<td>where / ?</td>
+<td>Filter input from the pipeline.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="where-method.html">Where</a> method</td>
+<td>&nbsp;</td>
+<td>Filter objects from a collection.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="while.html">While</a></td>
+<td>&nbsp;</td>
+<td>Loop while a condition is True.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="add-windowscapability.html">Add-WindowsCapability</a></td>
+<td>&nbsp;</td>
+<td>Install a Windows capability package on the specified OS image.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-windowscapability.html">Get-WindowsCapability</a></td>
+<td>&nbsp;</td>
+<td>Get capabilities for an image or a running OS.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-windowscapability.html">Remove-WindowsCapability</a></td>
+<td>&nbsp;</td>
+<td>Uninstall a Windows capability package from an image.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Export-WindowsDriver</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="add-windowsfeature.html">Add-WindowsFeature</a></td>
+<td>&nbsp;</td>
+<td>Install roles, role services, and features. (Server 2008 R2).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-windowsfeature.html">Get-WindowsFeature</a></td>
+<td>&nbsp;</td>
+<td>Retrieve roles, role services, and features.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="install-windowsfeature.html">Install-WindowsFeature</a></td>
+<td>&nbsp;</td>
+<td>Install roles, role services, or features (Server 2012 R2).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="uninstall-windowsfeature.html">Uninstall-WindowsFeature</a></td>
+<td>&nbsp;</td>
+<td>Uninstall/remove roles, role services, and features (2012 R2)</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Mount-WindowsImage</td>
+<td>&nbsp;</td>
+<td>Mount a Windows image (WIM or VHD file) to a directory on the local computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Repair-WindowsImage</td>
+<td>&nbsp;</td>
+<td>Repair a Windows image in a WIM or VHD file.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="disable-windowsoptionalfeature.html">Disable-WindowsOptionalFeature</a></td>
+<td>&nbsp;</td>
+<td>Disable a feature in a Windows image.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="enable-windowsoptionalfeature.html">Enable-WindowsOptionalFeature</a></td>
+<td>&nbsp;</td>
+<td>Enable a feature in a Windows image.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-windowsoptionalfeature.html">Get-WindowsOptionalFeature</a></td>
+<td>&nbsp;</td>
+<td>Get information about optional features in a Windows image.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="add-windowspackage.html">Add-WindowsPackage</a></td>
+<td>&nbsp;</td>
+<td>Add a single .cab or .msu file to a Windows image.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-windowspackage.html">Get-WindowsPackage</a></td>
+<td>&nbsp;</td>
+<td>Get information about packages in a Windows image.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-windowspackage.html">Remove-WindowsPackage</a></td>
+<td>&nbsp;</td>
+<td>Remove a package from a Windows image.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Get-WindowsUpdateLog</td>
+<td>&nbsp;</td>
+<td>Merge Windows Update .etl files into a single log file.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-WinSystemLocale</td>
+<td>&nbsp;</td>
+<td>Set the system locale for the current computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Set-WinUserLanguageList</td>
+<td>&nbsp;</td>
+<td>Set the language list/properties for the current user.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="write-debug.html">Write-Debug</a></td>
+<td>&nbsp;</td>
+<td>Write a debug message to the console (5).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="write-error.html">Write-Error</a></td>
+<td>&nbsp;</td>
+<td>Write an object to the error pipeline (2).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="write-host.html">Write-Host</a></td>
+<td>&nbsp;</td>
+<td>Display text on screen.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="write-information.html">Write-Information</a></td>
+<td>&nbsp;</td>
+<td>Write to the information data stream (6).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="write-output.html">Write-Output</a></td>
+<td>write / echo</td>
+<td>Write an object to the pipeline (1).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="write-progress.html">Write-Progress</a></td>
+<td>&nbsp;</td>
+<td>Display a progress bar.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="write-verbose.html">Write-Verbose</a></td>
+<td>&nbsp;</td>
+<td>Write a string to the host’s verbose display (4).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="write-warning.html">Write-Warning</a></td>
+<td>&nbsp;</td>
+<td>Write a warning string (3) in <span class="reverse">reverse video</span> to the display.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-wmiinstance.html">Set-WmiInstance</a></td>
+<td>swmi</td>
+<td>Create or update an instance of an existing WMI class.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="invoke-wmimethod.html">Invoke-WmiMethod</a></td>
+<td>iwmi</td>
+<td>Call WMI methods.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-wmiobject.html">Get-WmiObject</a></td>
+<td>gwmi</td>
+<td>Get WMI class information.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-wmiobject.html">Remove-WmiObject</a></td>
+<td>rwmi</td>
+<td>Delete an instance of a WMI class.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="connect-wsman.html">Connect-WSMan</a></td>
+<td>&nbsp;</td>
+<td>Connect to the WinRM service on a remote computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="disconnect-wsman.html">Disconnect-WSMan</a></td>
+<td>&nbsp;</td>
+<td>Disconnect from the WinRM service on a remote computer.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="test-wsman.html">Test-WSMan</a></td>
+<td>&nbsp;</td>
+<td>Test if a computer is setup to receive remote commands.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="invoke-wsmanaction.html">Invoke-WSManAction</a></td>
+<td>&nbsp;</td>
+<td>Invoke an action on a specified object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="disable-wsmancredssp.html">Disable-WSManCredSSP</a></td>
+<td>&nbsp;</td>
+<td>Disable Credential Security Service Provider (SSP) authentication.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="enable-wsmancredssp.html">Enable-WSManCredSSP</a></td>
+<td>&nbsp;</td>
+<td>Enable Credential SSP authentication.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-wsmancredssp.html">Get-WSManCredSSP</a></td>
+<td>&nbsp;</td>
+<td>Get the Credential SSP configuration.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-wsmaninstance.html">New-WSManInstance</a></td>
+<td>&nbsp;</td>
+<td>Create a new instance of a management resource.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="get-wsmaninstance.html">Get-WSManInstance</a></td>
+<td>&nbsp;</td>
+<td>Display management information (XML or value).</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-wsmaninstance.html">Set-WSManInstance</a></td>
+<td>&nbsp;</td>
+<td>Modify the management information related to a resource.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="remove-wsmaninstance.html">Remove-WSManInstance</a></td>
+<td>&nbsp;</td>
+<td>Delete a management resource instance.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="set-wsmanquickconfig.html">Set-WSManQuickConfig</a></td>
+<td>&nbsp;</td>
+<td>Configure the local computer for remote management.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="new-wsmansessionoption.html">New-WSManSessionOption</a></td>
+<td>&nbsp;</td>
+<td>Options for WSMan commands.</td>
+</tr>
+<tr>
+<td><a id="z" tabindex="-1"></a><span class="ix">Z</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="compress-archive.html">Zip</a></td>
+<td>&nbsp;</td>
+<td>Compress or Extract zip files.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="syntax-comments.html">&nbsp;#&nbsp;</a></td>
+<td><pre>Comment / Remark.</pre></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="source.html">&nbsp;.&nbsp;</a></td>
+<td>Run a command script in the current shell. <b>Source</b> or dot operator.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="call.html">&nbsp;&amp;&nbsp;</a></td>
+<td>Run a command, script or function. <b>Call</b> operator.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="foreach-object.html">&nbsp;%&nbsp;</a></td>
+<td>Alias for <a href="foreach-object.html">ForEach-Object</a>.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="stop-parsing.html"> --%&nbsp;</a></td>
+<td>Stop parsing input.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="where-object.html">&nbsp;?&nbsp;</a></td>
+<td>Alias for <a href="where-object.html">Where-Object</a>.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>$<i>variable</i> = &quot;<i>value</i>&quot;</td>
+<td>&nbsp;</td>
+<td>Define a variable  also: ${n!a#me} = &quot;value&quot;.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="syntax-pipeline.html"> $_</a></td>
+<td>The current <a href="syntax-pipeline.html">pipeline</a> object.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="syntax-automatic-variables.html">$$</a></td>
+<td>The last token in the last line.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="syntax-operators.html">@(...)</a></td>
+<td>Force an expression to be evaluated as an array.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="syntax-esc.html">&nbsp;`&nbsp;</a></td>
+<td>Escape or Continue on the next line.</td>
+</tr>
+</tbody>
+</table>
+<p>The cmdlets above are listed in A-Z order, matching  the <i>Verb-</i> and/or <i>-Noun</i> and/or <i>Alias </i> of the cmdlet (so some duplicates).<br>
+To scroll this page, press  [ a – z ] on the keyboard,  also on the detail pages '\' = Search, 's' = syntax  'e' = examples.</p>
+<p>PowerShell can also run  all the standard <a href="../nt/">CMD commands</a>  (external commands), <span class="code">.cmd</span> batch files will run within a CMD.exe shell (so can include <em>internal</em> CMD commands), plus all Resource Kit utilities. VBScript can also be run via <span class="code"><a href="../vb/cscript.html">cscript</a></span>. [ <a href="syntax-run.html">Examples</a> ]</p>
+<h3>Related</h3>
+<p class="space">A shorter list of <a href="basic.html">Basic Windows PowerShell</a> cmdlets.<br>
+<a href="ad.html">Active Directory</a> cmdlets.<br>
+<a href="https://learn.microsoft.com/powershell/">Microsoft product documentation</a> for PowerShell. <br>
+<a href="../links/pslinks.html">Websites, additional Cmdlets, Utilities and Books</a> for PowerShell.</p><!-- #BeginLibraryItem "/Library/foot_menu.lbi" --><hr>
+<div id=bl>&nbsp;</div>
+<div id=br>Copyright &copy; 1999-2025 <a href="https://ss64.com/">SS64.com</a><br>
+Some rights reserved</div><!-- #EndLibraryItem --></body>
+</html>
