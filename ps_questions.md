@@ -1,0 +1,51 @@
+## From Copilot:
+
+1. What does ```Out-Null``` do for the 'if' statement?
+* Out-Null throws away output. It's to avoid Powershell commands returning objects (as a DirectoryInfo object) and printing it to the screen. Piping a command to Out-Null helps declutter the screen.
+	
+* Out-Null is used in 'if' blocks to basically not print the results of the command on screen.
+
+2. Why use Where-Object instead of ForEach-Object?
+	They're two separate commands with different functions.
+	
+	```Where-Object``` is used for FILTERING- it keeps only items that match a certain condition. For example, it says "Give me only files newer tlhan 10 days."
+	
+	```ForEach-Object``` performs an action on each item. It's saying "for each ZIP, extract it."
+	This cmdlet can be used for filtering, but it's very clunky and not for idiomatic (intended purpose) of Powershell, which is designed to be more readable in contrast to Batch/Windows CMD.
+	
+	This is Where-Object filtering:
+	
+	```Get-ChildItem $dowf -Filter *.zip |
+    Where-Object { $_.LastWriteTime -gt (Get-Date).AddDays(-10) }```
+	
+	VS. ForEach-Object filtering:
+	
+	```Get-ChildItem $dowf | ForEach-Object {
+    if ($_.LastWriteTime -gt (Get-Date).AddDays(-10)) { $_ }
+}```
+
+3. What does $_. mean in Powershell?
+	Refers to the pipeline's current object.
+	It's comparable to '%%i' in Batch, but it's more powerfull since it's a full object instead of a string (less efficient for manipulation).
+	
+	For example:
+	```Get-ChildItem $dowf -Filter *.zip |
+    Where-Object { $_.LastWriteTime -gt (Get-Date).AddDays(-10) }```
+	
+	Here, '$_' is a FileInfo object with properties such as .Name, .FullName, .Extension, .LastWriteTime. Listed, it'd look like:
+	
+	```$_.Name
+	$_.FullName
+	$_.Extension
+	$_.LastWriteTime```
+
+	Batch could never do this, as it only displays text instead of actual objects.
+
+4. When to use ForEach-Object vs. foreach vs. Where-Object keywords in Powershell scripting? (basically what the difference is between ps looping keywords and their functions)
+
+	Where-Object for filtering
+	
+	ForEach-Object as a pipeline loop (does something to each item as it flows through a pipeline)
+	
+	foreach (keyword) for looping over a COLLECTION already in memory; for more 'traditional' loops, often faster and cleaner than ForEach-Object
+	
