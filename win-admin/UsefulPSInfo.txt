@@ -1,0 +1,161 @@
+clear-text credentials: sensitive data (e.g. usernames or passwords) sent or stored in plain text/readable format, without encryption, making them easily accessible to anyone who encounters the data; contains the original, raw data
+
+Explicit Credential Logon: aka Windows Event ID 4648; event generated when an unknown process tries to login to a computer by directly providing a username/password or other credentials rather than relying on an already established session
+
+winlogon.exe: core Windows system file and process that manages user login/logout, loads profiles, handles the Ctrl+Alt+Delete sequence and controls screensavers and workstation locking; essential for secure session management
+
+modularity: software design practice of breaking systems into separate, independent components
+
+OS loader: OS component respondible for loading and preparing programs for execution
+
+PE format: Portable Executable Format; standard executable file format used by Windows for DLL and EXE files
+
+API: Application Programming Interface; set of rules and specifications defining how software components communicate with each other (acts as a 'bridge' between two applications to exchange data)
+
+DLL: Dynamic Link Library; shared Windows library containing code, data and resources (e.g. fonts, images) that multiple programs can use simultaneously
+
+token- a PS parsing concept; one of the pieces that PS breaks a command into before deciding on an action
+
+transaction: set of one or more commands that are managed as a logical unit
+
+PowerSploit: a Powershell framework serving as a penetration-testing toolkit (post-exploitation/offensive security)
+
+Invoke -TokenManipulation: a PowerSploit function that manipulates users' tokens to run commands as the target user; allows for the attacker to access other systems with the target user's credentials
+
+param: keyword that defines input parameters for PS functions; the PS equivalent of function arguments in languages such as Python; usage of 'param' turns your script into an actual command
+
+Powershell options like [switch] and [string]
+
+backdoor: a hidden, unauthorized way of gaining access to a system, app or network
+
+trojan horse: malware that appears to be useful and/or harmless but has a secret malicious agenda
+
+RAT file: Remote Access Trojan; gives attackers hidden, full remote access over an infected computer
+
+INI file: Initialization file; plain text file for storing configuration settings for software, characterized by organizing data with brackets [] for sections and key=value pairs
+
+sandbox-security mechanism that isolates a program so that it can run without effecting the rest of the system (basically like a shield from outside processes)
+
+.NET: free, open-source dev platform from Microsoft for building several different types of applications (web, mobile, desktop, cloud and gaming) using languages such as C#, F# or Visual Basic; runs cross-platform on Windows, macOS and Linux
+
+.NET significance to Powershell:
+Powershell was built on the .NET platform and serves as a scripting interface for its underlying libraries and objects; everything within Powershell is a .NET object
+
+device driver: software that links hardware to an OS so they can interact; crucial for a computer to recognize peripherals
+
+Linux dotfiles: hidden configuration files for storing user-specific settings, preferences and customizations; in Unix-like systems, any file or directory name beginning with a dot is hidden by default
+	-Primary purpose is for personalizing a user's environment without cluttering their home directory
+	-Functions as a centralized way to manage configs for command-line tools, text editors, desktop environments and other utilities
+	-examples: .bashrc, .zshrc, .vimrc, .gitconfig
+
+registry (Windows): a central, hierarchical database for storing configuration settings and options, including:
+	-OS data (kernal, services, etc)
+	-user profile data (e.g.desktop themes, network settings, permissions)
+	-apps (e.g. file location, version history, launch settings)
+	-hardware config (e.g. drivers, properties, port usage)
+	-file associations (links file type (e.g. .docx) to the programs that open them (e.g. Word)
+	-Boot and performance (boot-up functions, system performance counters for profiling)
+	
+	Registry structure:
+		Hives: Top-level categories (e.g. HKEY_LOCAL_MACHINE, HKEY_CURRENT_USER)
+		Keys and Subkeys: Folders that organize settings hierarchically
+		Values: Actual data (e.g. text, numbers, binary) stored within keys
+	
+Using AI to merge and sort note files (.txt to markdown) into one doc
+
+When do you not need to use pipelines with Powershell?
+	-When the desired operation can be achieved with a single command (e.g. Clear-Host, Get-Help)
+	-When the command produces output that doesn't need further processing before reaching its final destination (e.g. Where-Object, Get-Process -Name 'chrome')
+	-Direct Variable Assignment
+	-Note: Pipelines are tools for SEQUENTIAL PROCESSING, meaning that it's only required WITH SEQUENCE
+
+Get-retrieves data
+Set-modifies the properties of an object
+Add-adds an item to a collection
+Stop-stops a process or service
+Start-starts a process or service
+Clear-removes all items from a collection
+
+common aliases:
+
+Ls for Get-ChildItem
+Gci for Get-ChildItem
+Dir for Get-ChildItem
+Gc for Get-Content
+Rm for Remove-Item
+Cd for Set-Location
+Cls for Clear-Host
+
+
+Parameters (the 'options' of a command) are marked with hyphens (-) before it
+
+Get-Help followed by cmdlet name provides the syntax and brief info about other commands
+
+Get-Command "_" lists all commands that have the contents inside the quotes
+
+Get-Process -Name "_" retrieves information on the supplied process name inside the quotes
+
+Get-Member used to understand the structure and capabilities of objects by listing their properties and methods
+
+Where-Object serves as a filter for retrieved information; often used with Get-Process Command
+
+Get-Service -Name "_" fetches Windows services
+
+Start-Service -Name "_" starts a service; Stop-Service -Name "_" stops a service
+
+Get-Eventlog or Get-WinEvent fetches event log entries with -LogName ""
+
+Get-Content fetches content within a file, such as a plain text file
+
+Set-Content or Add-Content allows you to write into files
+
+Out-File sends output to a file;  commonly used for formatted output
+
+New-Alias allows the user to create custom aliases and functions (e.g. New-Alias -Name p Value Get-Process)
+
+Get-NetAdapterStatistics fetches stats of a specified network adapter with -Name "_"
+
+Set-Location is basially CD. Use with -Path "_"
+
+Copy-Item copies files from one directory to another
+
+Start-Process runs files (e.g. EXE files)
+
+Import-CSV -Path imports a csv file; Export-CSV -Path exports a csv file
+
+ConvertTo-HTML converts a set of information to HTML format
+ConvertTo-Json converts a set of info to JSON format
+
+Test-Connection sends a ping to a defined remote host and checks whether it's reachable. Use the -Port parameter to check specific TCP ports
+
+Resolve-DnsName -Name tests the name resolution of a computer to check whether a specific computer exists in your current network. Use -Type to query for a certain type of records such as A (Address), AAAA (IPv6), CNAME or MX (Mail Exchange)
+
+Enable-PSRemoting enables Powershell remoting on a host
+Enter-PSSession -ComputerName connects to the remote host
+Exit-PSSession exits the session
+
+Invoke-Command runs a command non-interactively on a remote host
+New-PSSession establishes a persistent session for repeated operations
+
+Get-ExecutionPolicy verifies the current policy
+
+Set-ExecutionPolicy sets the policy. Use -Scope to specify the scope as well.
+
+Get-Acl -Path retrieves the ACL (Access Control List) for a file
+Set-Acl -Path sets the ACL for a file
+
+New-SelfSignedCertificate creates a self-signed certificate
+Set-AuthenticodeSignature is used to apply digital signatures to a script or file. Use options -Type, -Subject, CertStoreLocation as needed.
+Get-AuthenticodeSignature checks the signature for a file
+
+ConvertTo-SecureString creates a secure string of characters for a password or other sensitive data, then stores it into a file. Save the secure string to a file using a pipe followed by Out-File "C:\My-Path\Files"
+
+Get-ComputerInfo retrieves detailed info about a computer's hardware, OS and config settings
+
+Get-Host provides info about the current PS host environment. Useful for purposes such as debugging.
+
+Get-WmiObject queries Windows Management Instrumentation objects; provides info about different system components and services
+
+Note: To use functions after defined in a script, reference the name (e.g. ListAndCountFiles, ExecuteFollowingProcesses, etc.)
+
+
