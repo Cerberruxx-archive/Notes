@@ -3,3 +3,4 @@ const targets = ".ad-container, .google-auto-placed, .iframe, .adBanner, .corner
 document.querySelectorAll(targets).forEach(el => el.remove());
 
 
+
