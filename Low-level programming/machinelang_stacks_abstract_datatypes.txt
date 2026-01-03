@@ -16,6 +16,8 @@ abstract data type (ADT): mathematical model for data types, defined by semantic
 Examples of ADTs: lists, stacks, queues or maps.
 Examples of data structures: arrays, linked lists, hash tables, binary heaps.
 
+struct: short for "structure"; in C, a user-defined data type allowing the user to group multiple variables of different data types under a single name. Similar to tuples in Python.
+
 
 ==STACKS==
 
@@ -76,4 +78,5 @@ Common examples in programming:
 
 	* CPU cache. Stores frequently used instructions and data from RAM on the CPU chip itself for incredibly fast access.
 	* Web browser cache. Stores images, CSS Javascript files locally on your computer so websites load faster on repeat visits.
+
 	* Content Delivery Network (CDN). Caches static content on servers globally, closer to users, for faster delivery.
