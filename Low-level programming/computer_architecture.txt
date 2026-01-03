@@ -1,0 +1,92 @@
+(Information paraphrased/referenced from Google Search AI and Wikipedia)
+
+
+Assembly language: aka 'assembler language' or 'symbolic machine code'; any low-level programming language with a strong correspondance between the intructions in the language and machine code instructions
+
+Machine code: data coded and structured to control a computer' CPU via its programmable interface. Machine code instruction makes the CPU perform specific tasks such as: loading words from the memory to a CPU register, execution of an arithmetic logic unit (ALU) operation on one or more registers or memory locations, jumping or skipping to an instruction that is not the next one
+
+Arithmetic logic unit (ALU): combinational digital circuit that performs arithmetic and bitwise operations on interger binary numbers
+
+Graphical processing unit (GPU): electronic circuit designed for digital image processing and accelerating computer graphics; present either on a discrete, individual graphics card or embedded in the hardware on motherboards, mobile phones, PCs, workstations and game consoles
+
+
+
+Supercomputer vs. general-purpose computer:
+	Supercomputer: high-level performance computer for solving complex problems (e.g. climate modeling, drug discovery, nuclear physics); optimized for specialized tasks and use thousands of interconnected processorts with massive amounts of RAM and parallel file systems
+	
+	General-purpose computer: versatile for common tasks such as browsing, gaming, office work, and running various applications; includes fewer processing units and have standard RAM and storage 
+	
+	Performance of general-purpose computers measured in GHz; supercomputers measured in FLOPS (Floating-point Operations Per Second).
+	
+	Cost of general-purpose is relatively low, while supercomputers are extremely high and cost, therefore harder to maintain.
+
+	
+First vs. Second vs. Third Generation Computers:
+
+First (1940s-50s): used bulky vacuum tubes; were very large, generated an immense amount of heat, slow, expensive and used machine language
+
+Second (50s-60s): switched to Transistors (featured circuit boards with individual transistors and magnetic-core memory). Helped make computers become smaller and more practical for business use.
+
+Third (mid 60s-70s): switched to Integrated Circuits (ICs), leading to smaller, more powerful and afforable machines and helped develop minicomputers and early mainframes. These paved the way for personal computing. Also introduced high-level languages like BASIC and FORTRAIN.
+
+(Later) Fourth (70s-1980): Invention of the microprocessor; led to the development of PCs such as the Apple II and IBM PC, which brought computing to the masses and enabled networking.
+
+(Later) Fifth (present-day): Built on AI and advanced microelectronics
+
+
+Computer architecture: structure of a computer system made from component parts
+
+SUBCATEGORIES:
+
+Instruction set architecture (ISA): the interface between the computer's software and hardware that can also be viewed as the programmer's view of the machine. Defines the machine code that a processor reads and acts upon as well as word size, memory address modes, processor registers and data type. Usually described in small instruction manuals, which describes how the intrustions are encoded.
+
+'The ISA is roughly the same as the programming model of a processor as seen by an assembly language programmer or compiler writer.'
+
+Microarchitecture: aka 'computer organization; describes how a certain processor will implement the ISA. Includes the essential parts of the processor and how these interconnect and interoperate to implement the ISA. Usually represented as diagrams that describe the connections between elements of the machine.
+
+Systems design: includes all other hardware components such as data processing OTHER THAN the CPU (e.g. direct memory access), virtualization and multiprocessing
+
+
+Other topics in computer architecture:
+
+Macroarchitecture: architectural layers; more abstract than microarchitecture
+
+Assembly instruction set architecture: smart assembler may convert an abstract assembly language common to a group of machines into slightly different machine language for different implementations
+
+Programmer-visible macroarchitecture: higher-level language tools (e.g. compilers) that may define a consistent interface or contract to programmers using them
+
+Microcode: software that translates instructions to run on a chip
+
+Pin-architecture: hardware functions that a microprocessor should provide to a hardware platform (eg. x86 pins A20M, FLUSH); more flexible than ISA functions since external hardware can adapt to new encodings, or change from a pin to a message
+
+'Computers do not understand high-level programming languages such as Java, C++ or most programming languages used. A processor only understands instructions encoded in some numerical fashion, usually as binary. Software tools (e.g. COMPILERS) translate high-level languages into instructions that the processor can understand.'
+
+
+microprocessor: computer processor for which the data processing logic and control is included on a single IC or multiple ICs. They contain the logic and arithmetic required to perform the functions of a computer's CPU
+
+data path: collection of functional units (eg. ALUs, multipliers performing data processing operations, registers, buses) that allow data to flow between them 
+
+processor register: quickly accessible location available to a computer's processor. Consists of a small amount of fast storage and normally at the top of the memory hierarchy, providing the fastest way to access data. Registers are normally measured by the number of bits they can hold.
+
+locality of reference: refers to when a computer program accesses the same data repeatedly. The data is held in registers (SEE ABOVE DEFINITION) and can be critical to a program's performance for easier access.
+
+logic-gate: a fundamental building block in electronics used to erform logical operations based on the inputs provided to it; gives a logical output that can be either high(1) or low(0) (GeeksforGeeks)
+
+logic emulators: hardware or software that imitate the behavior of digital circuits; they allow designers to test complex logic designs (like processors or systems) on a programmable platform (like an FPGA or PC) before physical creation, essentially running the "guest" logic on a "host" system for verification and debugging
+
+prototype: an original model or test version of a product or system created to evaluate concepts, troubleshoot or gather feedback (basically a blueprint of a certain idea)
+
+
+Implementation
+
+Once an intruction set and microarchitecture have been designed, a practical machine must be developed through this process. Implementation is not usually considered architectural design, rather hardware design engineering. Steps include:
+
+Logic implemation: designs the circuits required at a logic-gate level.
+
+Circuit implementation does transistor-level designs of basic elements (e.g. gates, multiplexers, latches) as well as larger elements such as ALUs and caches that may possibly be implemeneted at the logic-gate level.
+
+Physical implementation draws physical circuits. The different circuit componenets are placed in a chip floor plan or on a board and the wires connecting them are created.
+
+Design validation tests the computer as a whole to see if it works in all possible situations and timings. Once this starts, the design at the logic level are tested using logic emulators. Because the 'logic-emulator' process is often too slow to run a realistic test, corrections are made based from the process and prototypes are built using Field-Programmable-Gate-Arrays (FFGAs). Most hobby projects stop at this stage. The final step involves testing prototype ICs, which may require several redesigns before actual success.
+
+**Note: For CPUs, the entire implementation process is organized differently and referred to as CPU design.

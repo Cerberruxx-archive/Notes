@@ -1,0 +1,79 @@
+NOTE: The following information is paraphrased or directly recorded from: Google Search AI, GeeksforGeeks, Wikipedia, MDN Web Docs, IBM Docs. I hastily typed the info so I don't have all the direct sources. Reminder to use this only for self-educating purposes.
+
+"machines follow the language of binary system, [meaning] 0 and 1" (GeeksforGeeks)
+
+types of assembly languages
+
+"The primary use of JSON is for transmitting data between a server and the client's browser (e.g., via a Fetch API request). The server sends raw, structured data in JSON format, which the client-side JavaScript then uses to populate the HTML page, rather than the server sending pre-generated HTML for every update.
+JavaScript can easily convert a JSON string into a native JavaScript object using JSON.parse(). Developers then use this object to dynamically create and manipulate the Document Object Model (DOM) to display content, such as a list of products, user comments, or an autocomplete list, without requiring a full page reload."
+-Google AI Search, 'www.google.com/search?q=why+is+json+inserted+into+html+pages'
+
+
+abstract data type (ADT): mathematical model for data types, defined by semantics (behavior) from a user's point of view of the data. It contrasts with data structures, which are concrete representations of data and are the point of view of an implementer, not a user.
+	* Analogy: ADT is the menu at a restaurant, which specifies the dishes you can order (the operations), but not how the food is prepared. The data structure is the kitchen and the chef (the implementation) making the food, where the actual details are hidden from the customer (the user).
+	* Basically, the for abstract types, the user can see the model and behavior but CAN'T see the actual code being carried out.
+	
+Examples of ADTs: lists, stacks, queues or maps.
+Examples of data structures: arrays, linked lists, hash tables, binary heaps.
+
+
+==STACKS==
+
+stack: abstract data type serving as a collection of elements with the main operations 'push' and 'pop'; follows the Last-In, First-Out (LIFO) principle, making it similar to a physical stack of plates in which you would remove the top plate first.
+	'Push' adds an element to the collection
+	'Pop' removes the most recently added element
+	'Peek' (or Top) returns the top element without removing it
+	
+Stacks used commonly for:
+* Call stacks
+* Expression Evaluation
+* Syntax parsing
+* 'Undo' functionality
+* Web browser history
+
+Call stack: memory structure and mechanism that tracks active function calls in a program, using LIFO to manage execution flow and store each function's data (local variables, parameters, return addresses) in a "stack frame". It keeps track of its place in a script that calls multiple functions-what function is currently running and what functions are called from within that function (nested), etc.
+How it works:
+
+1) Function call (Push): FunctionA() calls FunctionB(); FunctionB's frame is placed on top of FunctionA's frame
+2) Execution: Program executes the function at the top of the stack.
+3) Function Return (Pop): When FunctionB finishes, its frame is removed. The program then resumes FunctionA where it left off.
+
+	*Note: LIFO (Last-In, First-Out) means that the most recently called function is the first one to finish and be removed.
+	
+	**If a stack takes up more space than it was assigned then a "stack overflow" error is thrown.
+
+
+Stack frame: block of memory for each function call containing its local variables, arguments, and the return address (where to go next)
+
+stack register: computer central process register with the purpose of keeping track of a call stack.
+
+stack machine: a computer processor or virtual machine that performs operations primarily using a stack, with the stack used to hold immediate results of calculations.
+	* For example, for an expression like (A+B) * (C+D), the machine would first push A, then B, perform the 'add' operation (which automatically pops A and B and pushes their sum), then push C and D, perform another 'add', and finally perform a 'multiply' operation on the two resulting sums.
+	* Note: most modern physical CPUs are register-based machines, but stack machines are commonly used in the implementation of VMs due to their conceptual simplicity and ease of implementation.
+	
+subroutine: another name for a function, procedure or method (reusable blocks of code for repeating a specific task) 
+
+return address: specific memory location saved to the call stack that tells a program where to resume after a function finishes. This allows functions to call other functions (or themselves) and return correctly, maintaining program flow.
+
+pointer: variable that stores a memory address, which "points" directly to another value or function stored elsewheree in the computer's memory. 
+
+Pointers are essential to low-level programming languages like C because they are the primary mechanic for:
+	* Dynamic memory allocation. Pointers manage memory on the heap (using functions like malloc(), calloc() and free() in C). This allows programs to manage memory sizes that are unknown at compile time.
+	* Efficient data handling. Instead of copying large data structures (e.g. arrays or structs) when passing them to a function, only a small pointer (the address) is passed, which saves a significant amount of memory and execcution time.
+	* Complex data structures. Pointers are used to build dynamic and interconnected data structures such as linked lists, trees and graphs, where each element needs to reference the next one in memory.
+	* Interfacing with hardware/OS. Pointers allow programmers to read and write from specific memory addresses (which are often mapped to hardware devices or system functions).
+	* However, manual management required by some langauges like C/C++ can lead to errors like memory leaks, dangling pointers and segmentation faults if not handled carefully. Meanwhile, high-level langauges often use 'references' or 'smart pointers' that abstract away some of this complexity and provide automatic memory management (garbage collection).
+	
+array: collection of objects of the same data type, allocated adjacently in memory
+
+linked list: linear collection of data elements, in which each element points to the next. It serves as a data structure consisting of nodes together representing a sequence.
+
+**Note:  "Because nodes are serially linked, accessing any node requires that the prior node be accessed beforehand (which introduces difficulties in pipelining). Faster access, such as random access, is not feasible. Arrays have better cache locality compared to linked lists."
+
+cache: fast, temporary storage area (hardware or software) that holds copies of frequently used data or computation results, which allows systems to serve future requests must faster than accessing the original, slower data source (e.g. database or disk). Caching can boost system or application performance by reducing latency and minimizing load times on backend systems.
+
+Common examples in programming:
+
+	* CPU cache. Stores frequently used instructions and data from RAM on the CPU chip itself for incredibly fast access.
+	* Web browser cache. Stores images, CSS Javascript files locally on your computer so websites load faster on repeat visits.
+	* Content Delivery Network (CDN). Caches static content on servers globally, closer to users, for faster delivery.
