@@ -1,20 +1,20 @@
+# Ideas
 
-Self-hosted art site
+## Web-based:
+Runs primarily on the web.
+* Self-hosted art site
+* (Updated) TV simulator 
+* Short visual novel (web or local)
+* GUI Calculator with changing themes with config options
+* Video player that can play both local files and fetch from web links; includes a "download" option from non-copyrighted sources
+* Web animation (with Ruffle and JS library)
+* Simple platformer game that saves progress in browser
 
-(Updated) TV simulator 
-
-Terminal snake game
-
-Short visual novel (web or local)
-
-Simple platformer game (saves progress in user’s browser)
-
-Calculator with gui, different themes/config included (web or local)
-
-Web animation (use with Ruffle and JS library)
-
- Video player; can play both local files and fetch from links; includes “download” option (only for non-copyrighted content)
-
-Web library that takes local text files (.txt, .pdf, .epub, etc) and organizes them in a GUI layout similar to kindle (like a “library”)
-
-Batch script that locks and unlocks a windows folder by password input (somehow encrypt?)
+## Local/CMD programs:
+Runs in the terminal or as a standalone window.
+* Script that locks and unlocks a folder vis encrypted password input
+* Script that searches for a user's password using brute force method
+* Hex encoding script
+* Terminal snake game
+* ASCII-based text game
+* Script option menu
