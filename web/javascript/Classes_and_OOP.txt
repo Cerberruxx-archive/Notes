@@ -1,0 +1,67 @@
+OVERVIEW:
+objects contains data in the form of properties.
+	^methods are functions inside an object
+	^OOP languages have the capability of creating classes and objects
+	^a class is a blue print for an object
+
+
+CLASS: a user-defined pattern for an object that defines a set of properties and behaviors, which characterize any object inside the class
+	^class properties are data members and methods
+	^you can access these properties via dot notation or a send operator
+
+
+CONSTRUCTOR: an optional method that initializes the attributes of the object
+	^automatically called when a new object (instance) of a class is created
+	^uses __init__
+
+CLASS VARIABLE: shared by all instances/objects of a class
+	^defined within a class, but outside the classes's methods
+	^common storage area for objects
+
+INHERITANCE/EXTEND: transfer of a class's characteristics (the base class) to other classes that are derived from it
+
+FUNCTION OVERLOADING: the same function defined with different arguments
+
+INSTANTIATION: creation of a class's instance
+
+OBJECT: unique instance of a data structure that's defined by it's class
+
+
+Here's an example of a class in python:
+
+
+class Person:
+	fname=''
+	lname=''
+
+	
+	''' 'self' key word is important to use and refers to the CLASS variable; without it, the code will look for a global var instead. '''
+
+	def names=(self):
+		return self.fname + " " + self.lname
+
+
+'''creating 'patrick' object from the Person class'''
+
+patrick=Person()	# object from Person class
+
+patrick.fname="Patrick" # setting fname for 'pat' object
+
+patrick.lname="Star" # setting lname for pat object
+
+
+'''creating the 'sb' object from Person class
+'''
+sb=Person()
+
+sb.fname="SpongeBob"
+sb.lname="SquarePants"
+
+
+'''calling the names() method to print the names'''
+
+print(patrick.names())
+print(sb.names())
+
+
+
