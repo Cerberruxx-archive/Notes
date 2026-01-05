@@ -1,0 +1,49 @@
+Connection between computer algorithms and mathematical theory:
+
+Algorithms are built upon mathematical theory, using concepts from discrete math (sets, graphs, logic) for design and analysis, and areas like linear algebra for graphics, providing formal frameworks (Turing machines) to define what can be computed. There is a two way relationship where math provides tools for computer science (e.g. calculus for AI, linear algebra for graphics) while algorithms help mathematicians complex concepts such as number theory and knot theory. - Google Search AI
+
+In simple words: The main principles of computer science and algorithms are directly based upon mathematical theories and principles. For example, number sets, graphing and logic are use for things like system design and process analysis
+Mathematical models are often also used to represent certain algorithmic concepts (see 'linear programming' (LP) in 'ComputerAlgorithms'). 
+
+
+Role of Automata theory in computational theory:
+
+Automata theory focuses on studying abstract machines to determine the capabilities and limitations of computation by analyzing mathematical models of HOW machines can perform the calculations.
+
+In other words: It provides the basis for understanding how machines process inputs and produce outputs; includes key components:
+
+Finite automata: Used to model simple systems like lexical analyzers in compilers
+
+Pushdown automata: A more powerful model capable of recognizing context-free languages, essential for parsing programming languages
+
+Turing machines: The most powerful automata, used as a standard for defining a problem's computability
+
+
+Difference between conductors and semiconductors:
+Electron mobility; conductors have a "sea of electrons" always available, while semiconductors require energy (heat, light, doping) to free up electrons to conduct, acting as switches.
+In other words: Conductors are "always on" (high conductivity) for current, while semiconductors act like controllable switches (turn on or off).
+
+How to dispose of toxic computer hardware waste:
+Use certified e-waste recyclers (e.g. Staples, Best Buy) or manufacturer take-back options.
+Before recycling, wipe all personal data from hard drives or physically destroy the drive to protect privacy. Remove any removable batteries (especially lithium-ion) and recycle them separately to prevent a fire risk.
+
+Differences between hard drives (HDDs) and solid-state drives (SSDs):
+Hard Drives (HDDs) use spinning platters and moving arms for storage, making them slower, noisier, and less durable but cheaper with higher capacities; SSDs (Solid-State Drives) use flash memory, resulting in significantly faster speeds (boot-ups, load times), greater durability, lower power use, and silent operation, though typically at a higher cost for the same capacity. 
+
+Microprocessors explained:
+A microprocessor is a tiny, powerful integrated circuit (IC) chip that acts as the "brain" of a computer, combining the essential functions of a Central Processing Unit (CPU) like arithmetic, logic, and control into a single component, handling instructions and data to perform tasks in devices from smartphones to supercomputers.
+They take binary data as input, process it according to stored instructions and provides binary output, enabling complex operations on a small silicon chip.
+
+Microprocessors vs. Microcontrollers:
+Microprocessors are essentially a tiny CPU that needs external memory and peripherals to function, while microcontrollers are basically an entire (albeit small) computer on a chip that integrates a microprocessor, memory and I/O peripherals together, which is also why they're often used in embedded systems like appliances and cars.
+
+I/O (input/output) device explained:
+A computer hardware component that allows computers to exchange data with other hosts/networks, by enabling communication between the system and its user, or another device.
+In other words, it's how a computer receives information (input) and presents results (output).
+Common I/O devices: printers, hard disks, keyboards, mice.
+
+Is there a different between I/O devices and peripherals?
+Yes, though there's significant overlap.
+Peripherals are a broader category for any external hardware device (input, output and storage devices), which *explicitly* includes I/O devices.
+Every I/O device is a peripheral but not all peripherals are strictly I/O (e.g. a simple storage-only device)
+
