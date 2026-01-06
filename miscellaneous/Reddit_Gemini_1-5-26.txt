@@ -1,0 +1,52 @@
+The "Missing Link" Topics (Gemini AI)
+
+Since you've been digging into architecture and want to keep that spark alive without the 'work' feel, here are three "bridge" topics that connect Architecture to Cybersecurity. These are usually the most fun "rabbit holes" because they explain why the hardware matters:
+1. The Stack vs. The Heap: How a computer organizes memory in real-time (and how "Stack Smashing" happens).
+2. CPU Rings (Protection Rings): Why your browser can't talk directly to your hardware, but the OS kernel can.
+3. Endiness (Big-endian vs. Little-endian): How different CPUs read numbers in different directions (this is a classic "mind-blowing" architecture fact).
+
+Recommended books/courses (u/Finallyfreetothink):
+
+Charles Petzold'-Code: The Hidden Language of Computer Hardware and Software
+"Walks you through the concepts of digital logic circuits to develop rudimentary processing and decision making...he used 18th century telegraph technology (simple switches and electromagnets) to illustrate the various logic gates and how they can be used to create much more complex circuits. At one point, he then switches to the modern world to explain the Intel family (At least up to something like 2002) of microprocessors."
+
+nand2tetris.org
+"Following the book, or course (but you have to figure out the specifics) to developing an entire 16-bit computer from a single nand gate."
+
+From u/FiercelyMediocre (unknown sub):
+"The way the George Hotz put it really resonated with how I felt that I improved. Try to do the thing, fail, figure out how to do the thing, repeat."
+
+From r/AskComputerScience subreddit (N/A post title):
+r/venuswasaflytrap: 
+"Suffering.
+Virtually everything I would consider 'good programming', are just habits to prevent a problem that I've run head first into in the past."
+
+u/rickpo:
+"A solid foundation of simple computer science (that you will learn in the first two years of a university degree), Thousands of hours writing code. Thousands of hours reading other people's code, including lots by someone who is a great programmer. And passion, drive, and perseverance."
+
+u/AmyHeartsYou:
+"Learning from mistakes. The best way is just to jump in and see what happens, and when it breaks, spend the time figuring out why."
+
+my thoughts: I like the last response but I don't think she was specific enough. I've learned that just 'jumping in' and doing SOMETHING was better than doing nothing, but it also depends on what it is. Are they trying to just run a simple program or are they messing with system registry files? The difference is that one can break and actually be a pain because they likely won't know how to fix it immediately and would have to buy a new computer (considering the scenario in which they actually mess up the OS). So I say, don't think TOO much about it and start learning. BUT, be sure that you at least have a simple idea of WHAT you're doing so you don't end up tinkering around and deleting important files or whatnot. 
+
+
+From u/okayifimust (Reddit) on r/cscareerquestions; user reply to "Whatever happened to learn on the job" to u/sexyman213.
+"Oh yes, it sucks!
+
+But just because we don't like it doesn't mean anyone will change it for us.
+
+If we wait until life is fair and gives us a job we could be doing well... we'll just end up waiting a long time.
+
+We don't have much of a choice here, other than doing what it takes. If -and its a big "if" we want to change things around and thre is any possibility for that, it will be from a position within the system.
+
+you can get the skills you ned, and you can get a job. I genuinely believe that it will be quicker and easier if you understand the perspective of an employer:
+'I can learn this' doesn't help them now, 'what will happen to society if nobody trains juniors' doesn't drive up their quarterly results. Various ways of phrasing 'I bring you value, and I will make money for you' can make an impact."
+
+thoughts: Although his point of view is pretty pessimistic, I'm actually in favor of the reply. A lot more people need to know the hard truth about tech careers, actually. I've already heard from several different web sources (on Youtube, seen users of CS subs saying it) that having a decent GitHub repo, experience and useful projects gets an employer's attention in contrast to just certs and resumes alone. Basically goes by the logic "oh yeah, I'll just skim the certs, I've seen these before nothing really special, what else do they have...?" They want variety too, what 'makes you different' from other candidates. 
+Maybe I'd get some certifications though, more for the learning than the actual certification however.
+
+
+From u/secretofficeninja on r/cscareerquestions on Reddit:
+
+"I'm a software developer for many years and got my college degree as computer science. When I came out of college it was completely different. Back then companies preferred a college graduate that they could train to their needs. Each company has specific technology and ways of working and they seemed to prefer college graduates who didn't yet learn 'bad habits' of a different employer.
+I don't know what happened but it's completely opposite now. My son is an engineering student and almost all jobs posted ask for 3-5 years experience. It doesn't make sense to me."

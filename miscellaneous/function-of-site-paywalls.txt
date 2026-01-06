@@ -1,0 +1,33 @@
+SOURCE: https://www.donnywals.com/building-a-backend-driven-paywall-with-revenuecat/
+--------------
+
+ The simplest version of a backend-driven UI is a UI that loads JSON, parses that JSON into model objects, and then your views render the parsed models into a SwiftUI list view.
+
+
+The trick to implementing a backend-driven paywall is in how you set up your offer.
+
+RevenueCat allows you to associate JSON metadata with your offering. You’re free to include as much metadata as you’d like which means that you can provide loads of paywall related information for a specific offer as metadata.
+
+
+To get started, we should write out the model that we intend to decode from our JSON Metadata. 
+
+
+To load PaywallInfo from our metadata, we can fetch our offering from RevenueCat, extract the metadata, and then decode that metadata into our model object.
+-----------------
+
+SOURCE: https://computer.howstuffworks.com/paywall.htm
+
+
+ The architecture of a paywall typically involves a combination of technology, content management systems, and payment gateways.
+
+
+TYPES:
+Hard paywall: requires users to pay for access to any content on the website (e.g. The Wall Street Journal)
+Soft paywall: allows users to access a limited amount of content for free before prompting them to make a payment or subscribe (e.g. The Washington Post)
+Metered paywall: allows users to access a limited number of content for free within a specific time frame before prompted to subscribe for unlimited access (e.g. any type of free trials)
+
+
+-----------
+
+
+

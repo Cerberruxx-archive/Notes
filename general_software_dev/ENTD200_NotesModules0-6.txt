@@ -1,0 +1,530 @@
+MODULE 0: Intro to programming
+
+computer program- set of instructions a computer follows to execute a well-defined task when written by its user
+	-the instructions must be clear, concise and detail-oriented
+
+input- data that the programs takes in when it runs
+	-e.g. time of day, passwords
+
+outputs- results produced by a program
+	-e.g. music that plays when an .mp3 file is opened, price of a grocery store item
+
+flowchart- visual tool including boxes that specify an action or a step to take and directional lines (indicate how to progress through each of the steps)
+
+pseudocode- text similar to code to plan out actual code; basically fake code that's easier for humans to read that's supposed to represent real code
+
+bits- the language of computers represented by 1's and 0's; single unit of binary information
+
+machine code- code written in computer language that directly controls the hardware of the computer in order to translate human language to computer language
+
+interpreted language- code in which the computer executes instructions directly without compiling it into machine language
+	also: when the computer is controlled by a program (interpreter) in which the user gives instruction to
+		-e.g. Python
+
+compiled language- code converted into machine code so the processor can execute it
+	-e.g. C and Rust
+
+binary- a number system used by computers in which it counts in groups of two; the largest number that can be represented in binary is *one*
+
+
+
+Why write computer programs?
+(A) Computers are great machines for following instructions, hence they will follow the instructions precisely every time they are commanded to do so. They also possess the ability to repeat the same mundane task over and over again, and can execute the same process each time with the same exact income (this would be way more inefficient for a human to complete). 
+
+What is the info that allows programs to interact with its environment called?
+(A) Inputs and Outputs.
+
+It's important to track the inputs and outputs of your program so that you can tell a user what your program needs in order to do its job, as well as what the user can expect in return from the program.
+
+Why use pseudocode?
+(A) Pseudocode is a helpful tool to begin the process of moving from human language to computer languages.
+
+Why use flowcharts?
+(A) They help to map out and understand what the program needs to do in order to complete a task.
+
+Name the two types of programming languages.
+(A) Interpreted and compiled.
+
+Why don't programmers only use interpreted languages?
+(A) Interpreted languages usually takes a while to process, as lots of software typically have millions of lines of code. Development teams and system architects often use both types of languages for different purposes in their software.
+
+One benefit of an interpreted language is:
+(A) The code is still in human language when run, so it's easier to debug.
+
+One benefit of a compiled language is:
+(A) The code is already in machine language so it runs faster.
+
+If a language uses another piece of software to translate the program into machine code in real time, it is:
+(A) Interpreted language.
+
+Compiled vs Interpreted language (source: IBM.com)
+--The overhead for the translation is incurred just once, when the source is compiled; thereafter, it need only be loaded and executed. Interpreted languages, in contrast, must be parsed, interpreted, and executed each time the program is run, thereby greatly adding to the cost of running the program.
+
+
+
+
+MODULE 1: Programming Basics
+
+comment- human readable line of text inside the code that is ignored by the computer
+	two types: in-line and full-line
+	*in-line- best used for  quick explanatory notes describing the behavior of the code on the same line
+	
+	*full line (doc strings)- longer text sections that give more detailed explanations of a chunk of code
+
+	#this is an in-line comment in python
+	
+	"""this is a doc string. You can use either double-quotes or single-quotes to make full-line comments."""
+
+variable- placeholder that holds data or some other input
+	tip: replace spaces with underscores or use camelCase; variable names also should NOT start with capital letters, a number (however, they can contain or end in numbers) or reserved keywords
+		**strings- variables used to store words or sentences
+
+		**int- variables that store integers
+
+		**float- variable that stores decimal points
+		
+print screen- the window in which the output of the code appears
+
+typecasting- the process of explicitly assigning a type to a variable
+
+What are some examples of when you would want to comment code?
+(A) When writing new functions that are incomplete while debugging, while searching for errors, when writing new code but want to save the old code in case of reuse or making changes to the old code.
+
+What are some of the principles of programming?
+(A) Write clear, organized, legible code; include comments to further clarify a specific line/block of code.
+
+What is an example of a code snippet that ensures the variable userAge is interpreted as string?
+(A) userAge = string(userAge)
+
+
+Additional notes:
+
+**When assigning a value to a variable in Python, the program being used to run the code will automatically assign a type for it.
+		**you can assign a specific type to the variable if preferred
+
+**Semicolons after declarations are not needed in Python
+
+**Mult-line comments are not allowed in Python; multi-line doctrings, however, ARE allowed
+
+---------------------------------------
+
+3 BASIC STRUCTURES FOR PROGRAMMING:
+
+1) Sequence- similar to following a recipe
+	telling the computer how to do something step-by-step-by-step-by-step-by-step
+	e.g. to-do list
+	
+2) Selection- "if this, do that, otherwise do something else"
+	computer performs certain actions based on certai conditions
+	
+3) Loop- instructing computer to perform a certain task as long as a certain condition is met (true) or for "a certain # of steps"
+	e.g. waiting for 15 minutes while chicken cooks
+	e.g. "while something, do that, then do this, repeat!"
+	
+You can also combine structures by using the following:
+	
+	Stacking structures – Attaching structures end to end.
+	
+	End-structure statements – The endif and endwhile statements that cause the loop to stop.
+	
+	Nesting structures – Placing one structure within another structure.
+	
+	Block – A group of statements that executes as a single unit.
+	
+Single-alternative ifs (Single-alternative selection) – The program takes no action when a condition is false.
+	
+Dual-alternative ifs (Dual-alternative selection) - Contains two alternatives—the action taken when the tested condition is true and the action taken when it is false.
+
+Else clause – The other half of the logical test of a true/false, yes/no condition. The false/no action resides here.
+
+If clause – A logical test of a true/false, yes/no condition. The true/yes action resides here.
+
+Iteration – Another word for repetition or looping.
+
+Loop body - The action or actions that occur within the loop.
+
+Modules – Routines of code that structured programs can be easily broken down into.
+
+Priming input (Priming read) - The statement that reads the first input value in a program.
+
+Spaghetti code —Code that is as confusing to read as following one noodle through a plate of spaghetti.
+
+Structure - A basic unit of programming logic; each structure is a sequence, selection, or loop.
+
+Unstructured programs - Programs that use spaghetti code logic are unstructured programs; that is, they do not follow the rules of structured logic.
+
+While loop (While…Do) – statements that continue to execute while a condition remains true. (Farrell, 2013)
+	
+Reasons for structure:
+(A)  It increases programmer clarity, professionalism, efficiency, program maintenance and modularity, and is easier to modify and maintain structured programs. Additionally, structured programs can be easily broken down into routines or modules that can be assigned to any number of programmers. Unstructuered programs only add confusion to its authors and viewers due to it being more difficult to read and review.
+
+
+
+
+MODULE 2: Operations on Numbers and Strings
+
+Syntax – the way any sort of language is structured (includes both computer code, mathematical or human-languages).
+
+Variables – Named memory locations whose contents can vary over time. (Farrell, 2013)
+
+String - sequence of characters or symbols; introduced & determined by quotation marks
+
+String concatenation- process of adding one string to another, thus combining both (comparable to addition)
+
+String constant - Using a specific text value, or string of characters, such as “Amanda”, within quotation marks.
+
+String variable - A separate type of variable that can hold letters of the alphabet and other special characters such as punctuation marks.
+
+Overloading - assigning two different behaviors to the same symbol
+
+Assignment operator – An equal sign.
+
+Compound operator - Able to use a mathematical operation and assignment operator simultaneously
+	(e.g.) x = 5
+			x += 3 # same as x = x + 3
+
+			print(x) #the result will be 8
+
+Assignment statements – A statement in which any operation performed to the right of the equal sign results in a value that is placed in the memory location to the left of the equal sign.
+
+Index - Refers to a location in a string
+(e.g.) indexString = "Hello, there"
+		print(indexString[5]) #the result will print ','
+
+Camel casing – A variable naming convention in which the first letter of a variable name is lower case and any words that follow in the variable name begin with an upper case letter, making the name easier to read.
+
+Compiler or interpreter - Language translation software that converts a programmer’s statements to binary form.
+
+Data - Through hardware devices, data, or facts, enter the computer system.
+
+Sequential data structure - structure in which there is a clear order of elements such that each element has a defined position within the structure.
+
+Declare the variable - Provide the program with a data type and an identifier.
+
+Identifier - A variable name is also called an identifier.
+
+Information - After data items have been processed, they become information.
+
+Input - Hardware devices that perform input operations include keyboards and mice.
+
+Garbage value - Uninitialized variables have an unknown value.
+
+Logic – Making sure you give the instructions to the computer in a specific sequence, not leaving any instructions out, and not adding extraneous 
+instructions.
+
+Logical errors – Statements that have correct syntax but are out of sequence or ask the computer to perform operations in a wrong order.
+
+Named constants - Similar to a variable, except that, unlike a variable that can be assigned different values over time, a named constant can be assigned a value only once.
+
+Numeric constant (Literal numeric constant, unnamed numeric constant) - A specific numeric value.
+
+Numeric variable - Can have mathematical operations performed on it; it can hold digits, and can usually hold a decimal point and a sign indicating positive or negative if you want.
+
+Pascal casing – Each word in a variable name begins with an upper case letter.
+
+
+What can you use to initiate a multi-line string?
+(A) Triple quotation marks.
+
+What would be the correct way to write the arithmatical expression 5 plus 3 multiplied by 2? Explain.
+(A) In Python, x = 2*(5+3) would be the correct expression, as opposed to x = 2(5+3). This is because Python does not support mathematical distribution.
+
+What is considered as a keystroke in Python code?
+(A) Every keystroke; this includes letters, numbers, symbols, punctuation, and spaces.
+
+
+
+
+MODULE 3: Booleans and Conditionals
+
+conditionals- a set of structured instructions for computers to follow written in code; also called the 'hypothesis' of the If Then model (the statement is the 'conclusion' in this case)
+	
+boolean- values that are either true or false; binary value type
+	**note: a computer's decisions are based on boolean values
+
+
+Everything you do on a computer, phone or another machine is the result of ____.
+(A) Combining true or false statements.
+
+What is an example of a boolean?
+(A) Binary code in computer science; "[the] idea of zero being false and one being true is a fundamental concept."
+
+What is an example of a conditional?
+(A) If you finish all your chores, then you can have relaxation time after; if it rains, then bring an umbrella.
+
+What types of variables prove 'true' and 'false' when typecasted as a boolean?
+(A) TRUE: positive and negative integers, a non-empty string
+	FALSE: zero, keyword 'false', empty data structure/string
+	
+Name an example of a binary pair.
+(A)  An on and off switch; 'on' is '1' (true) while 'false' is '1' (false).
+	**this is also the reason there is a 1 and 0 on a switch.
+	
+The structure of a conditional statement is:
+	if (some condition)
+		then do this
+		
+What is meant by a 'white space delineated language'?
+(A) Indentation indicates the separation between words, values, etc. rather than dedicated delimiters such as commas or semicolons.
+		**Python is an example, while JavaScript would be the opposite
+
+What keyword introduces conditionals in Python?
+(A) 'If'
+
+What will print from the following code?
+
+	userAnswer = True
+		if(userAnswer):
+  	print("That's right!")
+
+(A) 'That's right!' since the variable was assigned to the 'True' val
+
+
+
+
+MODULE 4: Advanced Conditionals
+
+conditional branches- statement that tells a computer what to do based on a certain condition (usually decided by boolean statements).
+
+'elif' keyword- short for 'elseif'; used to introduce all following non-default cases in a conditional branch
+
+
+Structure of a conditional branch:
+'''Start code'''
+
+	if (some condition):
+		do this
+	else:
+		otherwise, do this instead
+	
+	'''This is an example below'''
+	x = 8
+	if (bool(x)):
+		print("This bool is true")
+	else:
+		print("This bool is false") #output will print 'This bool is true'
+		
+	'''Example below'''
+	x = 5
+	if (x != 5):
+		print("The statement is true")
+	else:
+		print("The statement is false") #output will print "The statement is false"
+		
+	'''The last example'''
+	userNumber = input("Give me a number: ")
+	
+	if(userNumber > 0):
+		print("Positive")
+	elif(userNumber == 0):
+		print("Zero")
+	else:
+		print("NEGATIVE")
+'''End code'''
+
+		
+compound conditional statement- "checks multiple conditions simultaneously using logical operators like "AND" (&&) or "OR" (||)"; only executed when certain conditions are met.
+
+
+What are the different types of logical operators used for conditional branches?
+(A) "and"- BOTH conditions must equate to true
+	"or"- only ONE condition required to equate to true
+	"not"- is the opposite of a certain condition (e.g. true goes to false; false goes to true)
+			note: the '!' operator (pronounced as "BANG") is used to express the 'not' operator in other programming langauges
+		
+
+Which logical operator is the most restructive when it comes to conditional branches?
+(A) The "AND" operator since both conditions MUST be true.
+
+The best way to compare conditions besides in code is to:
+(A) Create a truth table.
+
+Why must elif statements contain an expression to be evaluated?
+(A) Yes; elif stands for 'else if', meaning that elif statements need to always contain a statement to be evaluated (Limespring).
+
+How many 'if' statements can a conditional branch contain?
+(A) Only one.
+
+What happens if the user enters "cat" into the following code snippet?
+
+"""Start example code"""
+	userInput = input("Name a type of pet.")
+	if(userInput == "dog"):
+		print("Dogs are great!")
+	else:
+		print("I'm not familiar with that type of pet.")
+	elif(userInput == "cat"):
+		print("Cats are great pets!")
+		
+"""End example code"""
+
+(A) The code will result in an error; all 'elif' statements should be in between the 'if' and 'else' statements.
+
+
+
+
+MODULE 5: Loops
+
+loop- a form of repetition in code; makes the program repeat a specific task x number of times
+
+		'while' loop- for running an unknown number of times
+		
+		'for' loop- for running a task a specified number of times where "the count increments after each successful execution of instructions"
+		
+		infinite loop- happens when a 'while' loop always evaluates to 'true'
+			**note: be careful with these; it can make the program crash
+			
+		nested loops- loops inside of loops
+			
+iteration- the process of moving through a sequential data structure one by one; tracks repetition of a for loop
+
+
+Give an example of a 'while' loop.
+(A) Tapping the table until someone says 'stop'. (Limespring)
+
+Give an example of a 'for' loop.
+(A) Tapping the table 10 times. (Limespring)
+
+What will print by running the following code:
+
+<---start--->
+for i in range(2):
+	for j in range(4):
+		print("*", end = "")
+	print()
+<---end---->
+
+(A) It will print the following:
+
+		****
+		****
+
+In order to enable while loops to keep track of their repetitions and know when to stop, we must use an ______.
+(A) Operating condition.
+
+A for loop which iterates sequential structures (e.g. strings) is known as __.
+(A) Advanced 'for' loop.
+
+
+'''start example code'''
+myNumber = 0
+
+while(myNumber < 10): #the following loop will print out numbers from 0-10 until the variable is no longer true
+	print(myNumber)
+	myNumber += 1
+	
+'''end example code'''
+
+
+'''start code'''
+letterCount = 0
+userInput = ""
+
+while(userInput != "quit"): #this will count the chars in a user's word input unless the user enters "quit"
+	letterCount += 1
+	userInput = input("give me a letter: "")
+print(letterCount)
+
+'''end code'''
+
+
+'''start'''
+for i in range(0, 5): #i is 'index'
+	print(i) #prints numbers 0-4
+	
+
+
+myString = "computer"
+
+for i in range(8):
+	print(myString[1])
+	
+	
+	
+	'''advanced for loops'''
+myString = "computer"
+
+for character in myString:
+	print(character)
+	
+	
+	
+	for row in range(5):
+		for col in range(5):
+			print("("+ str(row) + " , " + str(col) + ")", end = "  ")
+			
+		print()
+		
+'''end example code'''
+
+
+
+
+MODULE 6: Functions
+**note: What is semester hours and how do they work??
+		What's the difference between an eventListener and function? (JS)
+
+function - "block of code [that] runs when [it's] called and performs a specific task
+
+abstraction - "hiding the exact details of immplementation [while] having a clear way to call the code segment"
+
+definition - "the process of creating a new function"
+
+'def' - short for 'define'; used to declare a new function in Python
+
+call - telling the computer to invoke an existing function
+	**note: the function MUST be called in order to execute!!
+	
+parameter - name for a placeholder in a function (used interchangebly with argument); basically a variable created for a specific function
+
+argument - the actual information inside of the parameter
+
+(variable) scope - "the region in which variables are alive or active [that helps] keep track of which variables are currently available [in your program]"
+		local scope - the scope of functions
+		global scope - the scope within the main code (not in any functions, conditionals, etc.)
+		
+recursion - type of repetition where "a process or a function calls itself, thus creating a looping effect"
+
+binary search - a famous type of recursive function that searches for a specifically stated code element by using the same iteration; the element can change but the search process will REMAIN THE SAME (changing variable/search subject; same function)
+
+return statement - used to "pass a value out from the function back to the original function call"
+
+
+
+What are the benefits of using functions?
+(A) Reduce repetition in code, allow the author to group code together (helps keep the code organized and avoids complication)
+
+What are good practices to creating a function?
+(A) Begin it with the keyword 'def', begin it with a letter and avoid spaces, reserved keywords and irrelevant words/statements.
+
+TRUE OR FALSE: Functions in Python can include multiple arguments and parameters.
+(A) True.
+
+Every recursive function requires a ____.
+(A) A base case, a conditional ("determines when it should make another call to itself"), input parameter and a call to itself.
+
+A recursion functions allows for a program to ___.
+(A) build off its previous calculations (Limespring)
+
+
+
+
+# EXAMPLE FUNCTION
+
+define subtraction(num1, num2):
+	print(num1 - num2)
+	
+subtraction(4, 8) #these two examples are exclusive to Limespring
+subtraction(8, 4) #code will plug in 4 and 8 into num1 and num2, then print out the correct response
+
+
+'''Recursion example'''
+def myFunc(number):
+	print(number)
+	
+	if(number > 0):
+		myFunc(number - 1)
+		print("I'm done with the", number, "call")
+		
+myFunc(5)
+	

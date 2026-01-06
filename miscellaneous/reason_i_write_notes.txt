@@ -1,0 +1,2 @@
+The reason I’m actually spending time writing and organizing non-academic notes:
+Gain knowledge of low-level programming —> Understand how and why computer hardware and firmware interact with software and assembly/low-level programming language —> Have more control over my PC for custom configuration; Understand how and why exploits spread to different parts of the computer’s software to hardware components —> Gain knowledge to analyze exploits and hacking techniques in-depth; Ability to create my own tests/hacks (education purposes obv)

@@ -1,0 +1,23 @@
+Another name for a variable is an identifier. Variables are named, stored memory locations.
+
+Most programming languages alow more than one word, but no spaces between words and it should have a helpful meaning.
+
+Note the difference between a standard assignment operator (=) and the 'equals' operator (==)
+
+Note the difference between regular math (where the answer is to the RIGHT of the equal sign) and computer math (answer on the LEFT side of equal sign).
+
+Programmers must distinguish between numeric and string values because computers handle the two types of data differently (specify the data type if you want to be sure).
+
+The three major operations that computer hardware and software accomplish are input, processing, and output (IPO).
+
+A compiler is software that translates a programmer's code to binary form.
+
+Programs have to be loaded into main memory (RAM) before they can run.
+
+Desk-checking is the process of walking through a program's logic on paper before actually writing the program.
+(This is essentially just brainstorming on paper)
+
+The kind of language a computer understands is low-level machine language.
+
+Program maintenance is required to changes made after a program is put into production.
+
