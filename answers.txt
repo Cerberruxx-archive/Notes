@@ -47,3 +47,54 @@ Yes, though there's significant overlap.
 Peripherals are a broader category for any external hardware device (input, output and storage devices), which *explicitly* includes I/O devices.
 Every I/O device is a peripheral but not all peripherals are strictly I/O (e.g. a simple storage-only device)
 
+What is a kernel?
+A program located at the core of an OS, that basically has complete control over everything in the system, managing hardware and software while acting as a bridge for physical components (e.g. CPU, memory, devices) and the system's applications.
+The OS can't exist without a kernel because it completes essential tasks like hardware interaction, resource and process management, and security.
+
+What is GNU/Linux?
+GNU is a list of programs (provided by the GNU project) that create a bare-bones  OS when installed via the Linux kernel.
+To clarify, Linux itself is technically the kernel; the 'heart' of the OS.
+GNU provides the software and stuff it needs to be a WORKING OS.
+**To note: the GNU utilities and kernel often aren't really enough, which is why other distros like Arch, Debian, Ubuntu, etc. bundle various other software as well as a default GUI, audio servers, and more. 
+**Linux/GNU is essentially like MS-DOS, while the distros are like Windows 7 or 10 (referring to the addition of the GUI over time)
+
+What is resource and process management on a CPU?
+Resource management includes the allocation of CPU time, memory and peripherals across different programs.
+Process management refers to how applications will multitask and schedules, starts and stops applications.
+
+What is an interpreter?
+Interpreters are the opposite of compilers; they translate and execute high-level code to machine language *line-by-line*, whereas compilers translate high-level code to machine code *all at once*.
+It's a lot easier to catch and debug errors because of how it's read line-by-line, although compilers report all the errors after the entire run process is done.
+
+What does 'BLOB' refer to?
+It stands for 'Binary Large Object' and is a data type that stores multimedia files that are too large to be saved in any other type of data field.
+
+Define 'endianness'.
+A term referring to the order that a computer arranges bytes in its memory.
+Big-endian (BE) stores the most important byte first (least to greatest); Little-endian (LE) stores the least important byte first (greatest to least).
+This is to transport and store bytes in a memory address.
+
+Why does a program only count as an algorithm when it's a finite loop?
+Finiteness is a requirement of an algorithm.
+Explaining further, if a program runs infinitely, it fails its purpose of producing a result, making it a 'process' rather than an 'algorithm' (which is supposed to eventually end to output a certain result).
+If the process never ends then the result is never delivered.
+
+How does memory hierarchy work with computer storage?
+It organizes storage in layers, from CPU registers (fastest, smallest) down to disks (slowest and largest), which is done to keep frequently used data close to the CPU for quick access and least used data to the RAM for caching.
+
+What is a bus?
+A high-speed communication system that transfers data between either components inside a computer or between computers.
+Acts as a 'digital highway.
+*For example, a motherboard's internal bus connects core components of the PCB to internal storage.
+
+Explain high-speed vs. low-speed peripherals.
+High-speed peripherals transfer large data amounts quickly while low-speed peripherals send small amounts of data at lower speeds.
+*Graphics cards, fast storage like SSDs, and high-res cameras are all high-speed peripherals.
+*Keyboards, mice, joysticks and real-time clocks are low-speed peripherals.
+
+What is lambda calculus and what relation does it have to computational models?
+Lambda calc is a system for studying computation based purely from functions, with its core concepts being variables, abstraction, functions and application.
+It's also a model equivalent to the Turing machine.
+
+Is calculus and physics directly related to things like computational models and computational theory?
+Yes, because calculus describes continuously changing systems (e.g. motion, electromagnetism) as physics provide the reasons why those systems occur. Calculus can apply to things like gradient descent or graphics algorithms; Physics can apply to physical simulations (like games) or fluid dynamics.
