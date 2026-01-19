@@ -98,3 +98,8 @@ It's also a model equivalent to the Turing machine.
 
 Is calculus and physics directly related to things like computational models and computational theory?
 Yes, because calculus describes continuously changing systems (e.g. motion, electromagnetism) as physics provide the reasons why those systems occur. Calculus can apply to things like gradient descent or graphics algorithms; Physics can apply to physical simulations (like games) or fluid dynamics.
+
+What is an Assembly language?
+Any low-level programming language like ARM, x86 (for Intel/AMD) and MIPS. They use certain mneumonic instructions such as ADD or MOV.
+**C is NOT considered an Assembly language because of how it's general-purpose and can be used at the low or high level; ASM (Assembly) languages are specific to a certain computer architecture.
+**C also provides a layer of abstract over specific details of CPU hardware while ASM is MUCH more direct, with near identical syntax between the mneumonic code and actual binary code. C referred to as "portable assembly".
