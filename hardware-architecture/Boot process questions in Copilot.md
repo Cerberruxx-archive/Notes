@@ -20,6 +20,8 @@ so the bootloader is *also* software on the firmware, and .efi file extensions i
 
 Why does the OS run in the RAM?
 
+
+
 You brought a *fantastic* set of questions — and the best way to answer them is to walk through each one clearly, simply, and in the right order so the whole system makes sense as a single chain.
 
 Let’s build the entire picture from the ground up.
