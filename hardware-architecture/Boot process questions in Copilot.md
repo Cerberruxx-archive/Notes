@@ -2,23 +2,23 @@ From Copilot.
 
 **So i have a lot of recorded questions:**
 
-how is a CPU created?
+ * how is a CPU created?
 
-how is the firmware chip created? if the firmware is stored through a flash memory chip on the motherboard, are there other types of firmware besides BIOS and UEFI? what exactly is BIOS and UEFI? when you say that microcontroller firmware is 'usually stored in internal flash memory' does that mean that the firmware is inside of an embedded system?
+* how is the firmware chip created? if the firmware is stored through a flash memory chip on the motherboard, are there other types of firmware besides BIOS and UEFI? what exactly is BIOS and UEFI? when you say that microcontroller firmware is 'usually stored in internal flash memory' does that mean that the firmware is inside of an embedded system?
 
-what does the RAM look like (is it another small chip)?
+* what does the RAM look like (is it another small chip)?
 
-is this all a part of the motherboard (except for the peripherals)?
+* is this all a part of the motherboard (except for the peripherals)?
 
-how exactly is the CPU activated via a button?
+* how exactly is the CPU activated via a button?
 
-when you say that the 'fixed address points to the firmware chip', does that just mean that the address is *within* the firmware chip?
+* when you say that the 'fixed address points to the firmware chip', does that just mean that the address is *within* the firmware chip?
 
-what would count as a 'bootable device'? and if i was to install an OS from a USB stick, is that where i would have to have the ISO file on the drive and boot it up from the stick? I've tried doing that with a Linux distro before but have had no success unfortunately. what do you mean by 'flashing it onto a microcontroller'?
+* what would count as a 'bootable device'? and if i was to install an OS from a USB stick, is that where i would have to have the ISO file on the drive and boot it up from the stick? I've tried doing that with a Linux distro before but have had no success unfortunately. what do you mean by 'flashing it onto a microcontroller'?
 
-so the bootloader is *also* software on the firmware, and .efi file extensions indicate that a certain file is for booting the OS? why would the bootloader copy the kernel file onto the RAM if the RAM is only for temporarily needed data (is it just needed to essentially 'load' the info from the kernel)?
+* so the bootloader is *also* software on the firmware, and .efi file extensions indicate that a certain file is for booting the OS? why would the bootloader copy the kernel file onto the RAM if the RAM is only for temporarily needed data (is it just needed to essentially 'load' the info from the kernel)?
 
-Why does the OS run in the RAM?
+* Why does the OS run in the RAM?
 
 
 
