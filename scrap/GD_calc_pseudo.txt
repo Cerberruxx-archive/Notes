@@ -1,0 +1,32 @@
+create function 'main'
+	create var $CURRENT_CUR
+	create var $CUR_TYPE
+	create var $TARGET_CUR
+	create var $RECALC_PROMPT
+
+	set $CUR_TYPE to input from prompt 'Enter currency type:	'
+		make $CUR_TYPE value case-insensitive
+		if $CUR_TYPE value DOES NOT EQUAL an string value, prompt 'Invalid Data Type. Try Again.'
+			return false
+	set $CURRENT_CUR to input from prompt 'Enter currency amount:	"
+		if $CURRENT_CUR value DOES NOT EQUAL an integer value, prompt 'Invalid Data Type. Try Again.'
+			return false
+	set $TARGET_CUR to input from prompt 'Enter target currency amount: "
+		if $TARGET_CUR value DOES NOT EQUAL an integer value, prompt 'Invalid Data Type. Try Again.'
+			return false
+
+	create function 'calc'
+		create var $CALC $TARGET_CUR - $CURRENT_CUR
+		display 'You need `$CALC` more `$CUR_TYPE`s.'
+	
+	# should i add parameters instead?
+
+	perform function 'calc'
+	
+	set $RECALC_PROMPT to input for user prompt 'Calculate again? (Y/N) "
+		make $RECALC_PROMPT case-insensitive
+		if $RECALC_PROMPT EQUALS 'Y' or 'Yes' then run function 'main'
+		elseif $RECALC_PROMPT EQUALS 'N' or 'No' then end function and exit file
+		else display 'Invalid value.'
+		return false
+		

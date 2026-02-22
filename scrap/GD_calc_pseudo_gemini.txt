@@ -1,0 +1,46 @@
+---note: This pseudocode snippet is a revised version of my pseudocode snippet 'GD_calc_pseudo'---
+
+create function 'main'
+    // 1. Get Currency Type (String validation)
+    set $CUR_TYPE to input from prompt 'Enter currency type (Stars/Coins/etc): '
+    make $CUR_TYPE value case-insensitive
+    
+    // 2. Get Current Amount (Loop until valid integer)
+    set $CURRENT_CUR to input from prompt 'Enter current amount: '
+    while $CURRENT_CUR value DOES NOT EQUAL an integer value
+        prompt 'Invalid Data Type. Please enter a whole number.'
+        set $CURRENT_CUR to input from prompt 'Enter current amount: '
+    end while
+
+    // 3. Get Target Amount (Loop until valid integer)
+    set $TARGET_CUR to input from prompt 'Enter target currency amount: '
+    while $TARGET_CUR value DOES NOT EQUAL an integer value
+        prompt 'Invalid Data Type. Please enter a whole number.'
+        set $TARGET_CUR to input from prompt 'Enter target currency amount: '
+    end while
+
+    // 4. Define and Perform Calculation
+    // Logic: Yes, adding parameters (curr, tar) makes the function independent!
+    create function 'calc' with parameters (curr, tar)
+        create var $RESULT = tar - curr
+        display 'You need ' + $RESULT + ' more ' + $CUR_TYPE + 's.'
+    end function
+
+    perform function 'calc' using ($CURRENT_CUR, $TARGET_CUR)
+    
+    // 5. Recalculation Prompt
+    set $RECALC_PROMPT to input from prompt 'Calculate again? (Y/N): '
+    make $RECALC_PROMPT case-insensitive
+    
+    if $RECALC_PROMPT EQUALS 'Y' or 'YES' then 
+        run function 'main'
+    elseif $RECALC_PROMPT EQUALS 'N' or 'NO' then 
+        display 'Exiting calculator. Good luck with the grind!'
+        exit file
+    else 
+        display 'Invalid value.'
+        run function 'main' // Restarting to be safe
+    end if
+end function
+
+run function 'main'
