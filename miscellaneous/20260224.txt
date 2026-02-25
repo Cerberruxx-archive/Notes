@@ -1,0 +1,1 @@
+```appassoc.xml``` is a specialized XML file format used in Windows 10 and 11 to define and manage default file type and protocol associations (e.g., ensuring .pdf files open with Adobe Reader instead of Microsoft Edge). It is commonly generated and deployed by IT administrators via the Deployment Image Servicing and Management (DISM) tool to create a consistent user environment

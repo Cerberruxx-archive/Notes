@@ -1,0 +1,40 @@
+How can electrical components come together to create a system?
+The components are assembled on a non-conductive substrate (mostly commonly a PCB) and are interconnected through conductive paths (like copper traces). They work together to create a closed loop that controls electric current to perform specific tasks (e.g. LED flasher or smartphone).
+Components like resistors, capacitors and ICs are attached via soldering (these utilize Surface Mount Technology (SMT) on pads or Through-Hole Tech (THT) through drilled holes).
+
+How are computer systems simulated with breadboards?
+By plugging components (e.g. ICs, transistors, resistors, LEDs) into a solderless grid-based board, created a physical, temporary, functional circuit for testing. Connecting the components with wires allows user to build and validate digital logic circuits, memory modules and microprocessors in real-time, allowing for faster prototyping and troubleshooting.
+
+How is voltage used and measured?
+Voltage acts as the electrical pressure that drives electric charge through circuits, enabling the operation of devices, motors and lightning. It's measured in volts (V) and is essential for calculating current through Ohm's Law (I=V/R), determining power consumption (P=V x 1) and managing electrical safety.
+
+What is Ohm's Law?
+Defines the fundamental relationship between voltage (V), current (I), and resistance (R) in an electrical circuit. States that current is directly proportional to voltage (two variables change in the same direction), and inversely proportional to resistance (one increases as the other decreases with a constant product).
+Higher voltage increases current, while higher resistance decreases it.
+
+**Note: direct relations form straight lines, while inverse form curves
+
+
+What's the connection between power, transmission and information?
+They're linked closely through Power Line Communication (PLC), which enables data transmission over existing electrical power lines. The technology modulates data signals onto power lines at a specific frequency, which allows simultaneous transmission of electricity and information, often used for home automation and internet access without new cabling.
+
+
+What's the difference between AC and DC?
+Alternating Current (AC) flows in cycles while Direct Current (DC) flows in a single, constant direction. For this reason, AC appears as a waveform (sine wave) on a graph and DC appears as a straight line. 
+AC voltage can easily be increased or decreased with transformer conversion, making it ideal for long-distance transmission and household power. DC is ideal for electronics, batteries and solar power because it does not require the complex, expensive infrastructure that's required for AC voltage transformation (no long conversion).
+
+How is electricity conducted?
+To conduct electricity, you must create a complete, closed circuit using conductive materials, such as metals like copper, aluminum or steel, to connect a power source's positive and negative ends. 
+The main factor of conductive materials is a high amount of free, delocalized electrons; these cause electricity or heat to pass through with minimal resistance.
+
+How is electricity represented through pictures and models?
+Because electricity is invisible, it's commonly visualized through circuit diagrams and symbols (see 'schematic diagrams'), analogies and field lines.
+Common representation methods include:
+* Schematic diagram (focuses on a circuit's logic and connections rather than the physical layout)
+* Pictorial diagram (uses realistic images of parts to visually represent a circuit)
+* Power/switch symbols ('I' represents the 'on' state of a closed circuit, and 'O' represents the 'off' state of an open circuit)
+* Color coding (red lines often used to indicate 'live' wires, while black or blue represent neutral wires)
+
+What is an oscillator?
+An electronic circuit/device that converts a direct current (DC) into a continuous, repeating alternating current (AC) without requiring an external input signal. They generate specific waveforms at set frequencies to act as a timing reference (the 'heartbeat') for electronics.
+

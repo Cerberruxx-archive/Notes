@@ -1,0 +1,33 @@
+"The basics are easy once you're passed the ahh haaa momnt. However understanding 100's or thousands of lines of code can be quite difficult."
+
+"Love x86 assembler. Been writing, debugging, and running it for almost 50 years. Been writing high level language as well. You have to able to understand assembler as I've caught compilers making mistakes plenty of times!"
+
+"As someone who's in the process of trying to learn x86 assembly language, I have a few of bits of advice: 1) make sure you know how pointers/indirection work...I come from a C background, which helps enormously. Coming to Assembly from a "for God's sake, don't make me think" language like Python probably won't help you. 2) Sweat the small stuff...if something in your code doesn't work, isolate that specific part and make small test programs until you figure out the result you want...assembly is all about small but precise steps...don't try and run before you can walk. 3) Forget everything you ever knew about "spaghetti code"...it's going to happen whether you like it or not...the skill is staying on top on it..."
+
+"1. Yes, registers can be volatile (caller saved) or non-volatile (callee-saved), so following conventions is key to managing them efficienty. You can refer to specific architecture manuals for guidelines.
+2. Assembly doesn't have structs like high-level languages, but you can mimic them by using memory locations and offsets to roup related data. Assembly's flexibility allows programmers to come up with creative ways to organize and manage data."
+
+"Motorola 6809 is indeed a nice 8-bit CPU, especially as it also provides some 16-bit features for more complex usage. Learning from practical examples such as that is always a great way to expand your knowledge."
+
+"Assembly definitely has a learning curve, but once you get the hang of it, it can be satisfying to work so close to the hardware. Thanks for watching."
+
+"the best way to learn assembly is to boot up cheat engine with an old single player game or the tutorial and try to mod its code while its running. the amount of knowledge and intuition i gained from it was incredible. even modded in the health regen system from gtav into san andreas :3"
+
+
+"You solve most problems by memorization and pattern recognition. Even if it's a new problem you'll look at how you solved other problems, find similarities and tackle it in this matter. Every softskill is important as well as hard skills and also having a broad engineering knowledge. You won't be invited to every interview, but every interview you go to will leave a mark on the interviewer that you are very knowledgeable and it will increase your chances."
+
+"computer engineering is hard from a hardware and programming perspective. It includes the least amount of physics in my opinion. Difficulty within engineering is quite subjective anyways imo."
+
+"I often questioned my professors in college regarding their math solutions, not because i didn't understand the math, the system uses rote memorization and standardized constants as a filter. It rewards the student who can replicate a 50-year-old derivation without questioning the underlying logic, this is an issue because it leave students struggling with strategy, interpretation, and generating new ideas. For a brain wired like mine the standard repetitive system was difficult. I kept finding different valid solutions so I would get marked wrong, I didn't have the best gpa because of this. A 4.0 gpa doesn't meant they are better than you."
+
+"I like that you emphasize the point that "life isn't fair." When successful people are asked what their secret is, they always answer hard work, consistency, and so on. While many others, despite working harder, never reach that point. That's life. Anyway good video!"
+
+"'There will be people who do the same amount of work as you--they put in less effort even sometimes--and get better results. Maybe it's luck. Maybe it's their parents.'
+
+Well damn, yeah that makes sense. It hits different when you have someone confirm it for you though. I actively try to understand the content and do my best regarding projects, but there will be peers my age and younger who just use AI on everything. It's so discouraging because most of the time they receive much better grades. And, somehow they may also score better on the exams than me. I don't believe it's cheating, but I feel like you never know nowadays."
+
+My outlooks:
+
+Regarding the person discussing peers using AI and scoring better grades: slow and steady still wins the race. Yeah they got better scores, but how well do they actually UNDERSTAND the material?? Future employers won't give a shit about the degree when they struggle to answer a simple question asked about their study of focus. And also, they're gonna be caught eventually and get in some trouble, that's for sure. Don't believe it.
+
+Regarding the comment discussing how life isn't fair: That's true. It's not. It's incredibly frustrating and shitty and it has fucked me up so many times in my head, just that simple little fact. I'd ask myself "then what even is the point in trying? what's the point of being alive?" the fucking point is JOY. the JOY of creation and achievement and hobbies. forget about the career for a second, because landing a high-paying position in a job that treats you like shit or you hate is never worth it in the long run, vs a lower-paying job that you love and thrive in. This is more of some sort of a mantra for myself. The point is, you have to enjoy it first. That's how a lot of the experts got to where they were. It's gonna be increasingly difficult to study and become a pro at something you don't even like.
