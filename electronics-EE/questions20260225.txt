@@ -1,0 +1,42 @@
+questions
+
+From about 2 days ago:
+
+What are sockets?
+
+What is Rust language used for?
+
+What systems is Termux or?
+
+How can I practice Assembly language with old hardware, like a motorola phone or a video game controller?
+
+From a day ago:
+
+Why can't electrons flow to anything else when a circuit is closed?
+
+Do bunched electrons cause more heat and energy?
+
+Why do electrons orbit around the nucleus?
+
+Why is the coil shape important for inductors? 
+How do inductors manipulate electrons and current?
+
+What is contained inside of a power supply?
+
+What does and doesn't count as a power supply?
+
+What are 'plates' in terms of electricity?
+
+What is the importance of capacitors in a circuit?
+
+From today:
+
+Can quantum physics connect back to electrical engineering? Are the two directly related?
+
+What is the significance of Newton's Law?
+
+How does the topic of physics directly connect to electricity and electronics?
+
+Can 'hydrostatic equilibrium' relate to the flow or state of a current?
+
+What is magnitude?

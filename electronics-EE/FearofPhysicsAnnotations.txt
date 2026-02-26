@@ -1,0 +1,40 @@
+# Fear of Physics by Lawrence M. Krauss notes
+
+## PREFACE TO THE NEW EDITION
+
+"Physicians themselves can follow modern developments only because they are largely based on the same handful of fundamentals that have been successfully applied to the modern-day world...Partly for this reason, this book is short. The tools that guide physics are few in number, and while it may take an advanced degree to master them, it doesn't require a massive tome to elucide them."
+
+"...physics is a human creative intellectual activity, like art and music."
+
+## THE PROCESS
+
+*"Before doing anything else, abstract out all irrelevant details!!"*
+
+Approximate. Form several hypotheses. Abstract-thinking.
+
+Everything moves differently at different rates.
+
+"Galileo stated cogently that the essence of action could be understood only to be removing the confusion introduced by the...circumstances in which moving objects find themselves."
+*This basically means that problem clarity only comes when you remove the irrelevant details from the problem.*
+
+"Objects moving freely, without being subject to any external force, will continue to move 'straight and forward'-along a straight line at constant velocity-regardless of their previous motion."
+
+"The only distinction between *constant* velocity and *zero* velocity is the magnitude of the velocity."
+
+"Zero is just one of an infinite number of possibilities."
+
+"The effect of a constant force will not be to change the position of an object by a constant amount, but rather its velocity."
+
+"A force that is changing will be reflected by a velocity whose change is changing! That's Newton's Law."
+
+"The problem with trying to perform on engineering analysis is that if there are many components, it may be extremely difficult to determine exactly where and when the forces on any specific component cause the motion to cease. A 'physics' analysis instead involves concentrating on the fundamentals and not the details."
+
+Explaining how things work and move would be difficult without any form of simplification, such as formulas and charts.
+
+"Much of physics is guided by looking where the light is."
+*Meaning: Much of physics is guided by simple observation."*
+
+## Thoughts
+
+This book seems heavily theory-oriented (which makes sense because it's physics). Physics is just made up of a bunch of theories after all. But I don't need a long explanation on theories from the author to explain surface-level stuff to people who are 'just curious', I need to know the FACTS first, then EXPLANATION and CONNECTION of all three.
+This is too much fluff for now, though it seems like an interesting read.
