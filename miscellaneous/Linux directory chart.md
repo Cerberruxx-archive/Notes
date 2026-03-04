@@ -2,7 +2,7 @@
 
 | Directory | Function | Note |
 | :---- | :---- | :---- |
-| / | Root directory |  |
+| ``/`` | Root directory |  |
 | /bin | Contains binaries (executables) essential to the OS. | Can be run anywhere from the shell |
 | $PATH | Tells linux where to find binaries | The reason *why* binaries can be accessed from any directory in the shell |
 | /sbin | System binaries that should only be executed by the root user |  |
