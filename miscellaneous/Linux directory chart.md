@@ -6,7 +6,7 @@
 | /bin | Contains binaries (executables) essential to the OS. | Can be run anywhere from the shell |
 | $PATH | Tells linux where to find binaries | The reason *why* binaries can be accessed from any directory in the shell |
 | /sbin | System binaries that should only be executed by the root user |  |
-| /lib | Shared libraries and kernels required to boot the system; runs fundamental commands from /bin and /sbin |  |
+| /lib | Shared libraries and kernels required to boot the system; runs fundamental commands from ``/bin`` and ``/sbin`` |  |
 | /usr/bin | Files not essential for the OS to run; designed to be used by the end user |  |
 | usr/local/bin | Files compiled manually by the user |  |
 | /which | ‘Which binary is this?’; shows which directory a binary is in and retrieves its full path | Add the name of the binary after the /which directory |
