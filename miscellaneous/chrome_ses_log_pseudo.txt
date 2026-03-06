@@ -1,0 +1,26 @@
+:DESC
+To log a process to a certain file. Script should record process name, date and simple info into one appendable file.
+
+
+IF NOT CREATED==YES:
+	CREATE SAVE FILE $LOGF = 'C:Windows\Sys32\MyLog.txt'
+ELSE CONTINUE
+
+OPEN $LOGF
+
+CREATE VAR $DATE = GETSYSVAR FOR 'Date'
+CREATE VAR $TIME = GETSYSVAR FOR 'Time'
+CREATE VAR $PROCESS = GETPROCESS 'chrome.exe'
+
+APPEND '$DATE $TIME $PROCESS'.
+
+SAVE FILE $LOGF TO [PATH]
+
+EXIT
+
+
+
+
+
+
+

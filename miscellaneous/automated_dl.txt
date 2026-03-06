@@ -1,0 +1,8 @@
+:DESC
+Script automates downloads of several apps while deleting certain preinstalled Windows apps (unspecified yet). Sets the theme of the computer by fetching a certain 'theme' file in the system files (or the registry).
+
+Uses node.js for managing the downloads (fetching from the web) and Powershell for scheduling the downloads and deleting files with admin-level access.
+
+C can be used for the backend; write a small program that monitors a directory by verifying the integrity of a new file.
+
+**note: Since this is likely going to be a more complex project, start small with minature scripts and projects to get the 'gist'. Use Gemini or Copilot to help 'debug' the scripts and to use as reference for the Desktop Automation script (the 'big' one).
