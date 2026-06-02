@@ -1,0 +1,35 @@
+@echo off
+setlocal enabledelayedexpansion
+
+:: 1. Get the Process ID of Steam
+for /f "tokens=2 delims==" %%A in ('wmic process where "name='steam.exe'" get processid /value 2^>nul') do (
+    set "SteamPID=%%A"
+)
+
+:: Check if Steam is even open
+if not defined SteamPID (
+    echo [!] Steam is not currently running.
+    pause
+    exit /b
+)
+
+:: 2. Ask the user what game/string they are looking for
+set /p "SearchString=Enter the game executable or partial name to search for: "
+
+echo.
+echo Searching for "%SearchString%" inside Steam (Parent PID: %SteamPID%)...
+echo ------------------------------------------------------------------
+
+:: 3. Find child processes matching that string
+set "found=0"
+for /f "tokens=1,2 delims=," %%G in ('wmic process where "parentprocessid=%SteamPID%" get caption^,processid /format:csv 2^>nul ^| findstr /i "%SearchString%"') do (
+    echo Found Game Process: %%G | PID: %%H
+    set "found=1"
+)
+
+if "%found%"=="0" (
+    echo [X] No processes matching "%SearchString%" were found running under Steam.
+)
+
+echo ------------------------------------------------------------------
+pause
